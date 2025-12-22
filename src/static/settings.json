@@ -1,0 +1,423 @@
+{
+  "intro": {
+    "id": "intro",
+    "generalWrapId": ".js-s3d__slideModule",
+    "title_img": "/wp-content/themes/3d/assets/s3d/images/mansion-big-logo.png",
+    "bg_url": "https://3d-mension-on-fisher.smartorange.site/wp-content/themes/3d/assets/images-wp/poster.jpg",
+    "video_url": "https://3d-mension-on-fisher.smartorange.site/wp-content/themes/3d/assets/images-wp/real-estate-v5-v2.mp4",
+    "faq": "Видалити цей об'єкт, якщо не потрібен інтро екран перед обльотом"
+  },
+  "genplan": {
+    "id": "genplan",
+    "generalWrapId": "#js-s3d__wrapper",
+    "imageUrl": "images/flyby/masterplan/",
+    "sd_imageUrl": "images/flyby/masterplan/",
+    "enableParalax": false,
+    "enableClouds": false,
+    "image_format": "jpg",
+    "show_flat_polygons_tooltip": true,
+    "show_flat_polygons_tooltip_key": "area",
+    "defaultTheme": "light",
+    "class": "js-s3d__wrapper",
+    "SLIDER_MOBILE_FINGER_SWIPE": false,
+    "numberSlide": {
+      "min": 0,
+      "max": 119
+    },
+    "verticalAlig_faq": "top || center || bottom",
+    "verticalAlign": "center",
+    "horizontalAlign_faq": "left || center || right",
+    "horizontalAlign": "center",
+    "video_keyframes": {},
+    "controlPoint": [
+      1,
+      24,
+      48,
+      72,
+      96
+    ],
+    "activeSlide": 1,
+    "rotateSpeedDefault": 24,
+    "rotateSpeed": [
+      {
+        "min": 79,
+        "max": 100,
+        "ms": 40
+      }
+    ],
+    "frameWithNorthDirection": 100,
+    "mouseSpeed": 0.5,
+    "startDegCompass": 60
+  },
+  "flyby": {
+    "1": {
+      "outside": {
+        "id": "flyby_1_outside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/masterplan/",
+        "sd_imageUrl": "images/flyby/masterplan/",
+        "enableParalax": false,
+        "enableClouds": false,
+        "image_format": "jpg",
+        "defaultTheme": "light",
+        "class": "js-s3d__wrapper",
+        "SLIDER_MOBILE_FINGER_SWIPE": false,
+        "show_flat_polygons_tooltip": true,
+        "show_flat_polygons_tooltip_key": "area",
+        "numberSlide": {
+          "min": 0,
+          "max": 119
+        },
+        "verticalAlig_faq": "top || center || bottom",
+        "verticalAlign": "center",
+        "horizontalAlign_faq": "left || center || right",
+        "horizontalAlign": "center",
+        "video_keyframes": {},
+        "controlPoint": [
+          1,
+          24,
+          48,
+          72,
+          96
+        ],
+        "activeSlide": 1,
+        "rotateSpeedDefault": 24,
+        "rotateSpeed": [
+          {
+            "min": 79,
+            "max": 100,
+            "ms": 40
+          }
+        ],
+        "frameWithNorthDirection": 100,
+        "mouseSpeed": 0.5,
+        "startDegCompass": 60
+      },
+      "inside": {
+        "id": "flyby_1_inside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/flyby/1/",
+        "sd_imageUrl": "images/flyby/flyby/1/",
+        "enableParalax": false,
+        "enableClouds": false,
+        "image_format": "jpg",
+        "defaultTheme": "light",
+        "class": "js-s3d__wrapper",
+        "SLIDER_MOBILE_FINGER_SWIPE": false,
+        "numberSlide": {
+          "min": 0,
+          "max": 120
+        },
+        "verticalAlig_faq": "top || center || bottom",
+        "verticalAlign": "center",
+        "horizontalAlign_faq": "left || center || right",
+        "horizontalAlign": "center",
+        "video_keyframes": {},
+        "controlPoint": [
+          1,
+          30,
+          60,
+          90
+        ],
+        "activeSlide": 1,
+        "rotateSpeedDefault": 30,
+        "rotateSpeed": [
+          {
+            "min": 79,
+            "max": 100,
+            "ms": 40
+          }
+        ],
+        "frameWithNorthDirection": 100,
+        "mouseSpeed": 0.5,
+        "startDegCompass": 60
+      }
+    },
+    "2": {
+      "inside": {
+        "id": "flyby_2_inside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/flyby/1/",
+        "sd_imageUrl": "images/flyby/flyby/1/",
+        "enableParalax": false,
+        "enableClouds": false,
+        "image_format": "jpg",
+        "defaultTheme": "light",
+        "class": "js-s3d__wrapper",
+        "SLIDER_MOBILE_FINGER_SWIPE": false,
+        "numberSlide": {
+          "min": 0,
+          "max": 120
+        },
+        "verticalAlig_faq": "top || center || bottom",
+        "verticalAlign": "center",
+        "horizontalAlign_faq": "left || center || right",
+        "horizontalAlign": "center",
+        "video_keyframes": {},
+        "controlPoint": [
+          1,
+          30,
+          60,
+          90
+        ],
+        "activeSlide": 1,
+        "rotateSpeedDefault": 30,
+        "rotateSpeed": [
+          {
+            "min": 79,
+            "max": 100,
+            "ms": 40
+          }
+        ],
+        "frameWithNorthDirection": 100,
+        "mouseSpeed": 0.5,
+        "startDegCompass": 60
+      }
+    }
+  },
+  "favourites": {
+    "id": "favourites",
+    "generalWrapId": ".js-s3d__slideModule"
+  },
+  "floor": {
+    "id": "floor",
+    "generalWrapId": ".js-s3d__slideModule",
+    "polygonValueToRender1": "type",
+    "polygonValueToRender2": "area",
+    "flatPropertiesToShowInFloor": [
+      {
+        "prefix": "currency_label",
+        "key": "_price",
+        "postfix": "",
+        "type": "number",
+        "size": "large"
+      },
+      {
+        "prefix": "currency_label_m2",
+        "key": "price_m2",
+        "type": "number",
+        "postfix": ""
+      }
+    ]
+  },
+  "flat": {
+    "id": "flat",
+    "viewType_faq": "viewType може бути двох видів: flat або villa",
+    "viewType": "flat",
+    "generalWrapId": ".js-s3d__slideModule",
+    "labelsToShowInInfoBlock": [
+      {
+        "key": "area",
+        "postfix_key": "area_unit",
+        "label": "Flat.information.area"
+      },
+      {
+        "key": "build",
+        "postfix_key": "",
+        "label": "Flat.information.build"
+      },
+      {
+        "key": "floor",
+        "postfix_key": "",
+        "label": "Flat.information.floor"
+      },
+      {
+        "key": "rooms",
+        "postfix_key": "",
+        "label": "Flat.information.rooms"
+      },
+      {
+        "key": "number",
+        "postfix_key": "",
+        "label": "Flat.information.number"
+      }
+    ],
+    "faq_questions": []
+  },
+  "plannings": {
+    "id": "plannings",
+    "generalWrapId": ".js-s3d__slideModule"
+  },
+  "filter": {
+    "viewType": "card",
+    "ranges": [
+      {
+        "title_i18n": "Filter.range.area",
+        "title_postfix_i18n": "Filter.range.area_unit",
+        "title_prefix_i18n": false,
+        "delimit_thousands": false,
+        "name": "area",
+        "type": "range"
+      }
+    ],
+    "checkboxes": [
+      {
+        "title": "Filter.checkboxes.rooms",
+        "type": "checkbox",
+        "needTranslation": false,
+        "translationNS": "Filter.rooms.",
+        "paramaterByWhatWillBeFilter": "rooms"
+      },
+      {
+        "title": "Filter.checkboxes.baths",
+        "type": "checkbox",
+        "needTranslation": false,
+        "translationNS": "Filter.baths.",
+        "paramaterByWhatWillBeFilter": "baths"
+      }
+    ]
+  },
+  "pinsInfo": {
+    "video": {
+      "FAQ": "Посилання 'iframe' автоматично буде розпізнавати в  якому тегу в попапі виводити інформацію, якщо це зображення - img, все інше - iframe",
+      "FAQ_2": "Якщо вказати тип text,  за координатами полігона буде виводитися текст, полігон має мати тільки дві точки",
+      "type": "zone",
+      "position": "center",
+      "title": {
+        "en": "Tennis court",
+        "uk": "Тенісний корт"
+      },
+      "description": {
+        "en": "Parking description",
+        "uk": "Опис паркінгу"
+      },
+      "img": "/wp-content/themes/3d/assets/s3d/images/flyby/masterplan/113.jpg",
+      "filter_type": "arrow"
+    }
+  },
+  "hide_s3dFlybySideChooser": true,
+  "markers": [
+    "commercial.svg",
+    "marker.svg",
+    "marker2.svg",
+    "parking.svg",
+    "playground.svg",
+    "shop.svg",
+    "street.svg",
+    "underground.svg",
+    "walking.svg"
+  ],
+  "unit_statuses": {
+    "0": {
+      "label": "Продано",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-warning)"
+    },
+    "1": {
+      "label": "Свободно",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-success)"
+    },
+    "2": {
+      "label": "Резерв",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-warning)"
+    },
+    "3": {
+      "label": "Бронь",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-warning)"
+    },
+    "4": {
+      "label": "Недоступно",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-danger)"
+    },
+    "6": {
+      "label": "Заблокировано",
+      "color": "var(--text-gray-200)",
+      "background": "var(--color-semantic-danger)"
+    }
+  },
+  "form": {
+    "prefered_countries": [
+      "us"
+    ]
+  },
+  "flyby_finish_dates": {},
+  "assotiated_flat_builds_with_flybys": {},
+  "project_google_map_location": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17199.266200193822!2d-80.15217019576157!3d25.76005918764354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4f8c789a303%3A0xeec2607c3852bfd7!2zRmlzaGVyIElzbGFuZCwg0KTQu9C-0YDQuNC00LAgMzMxMDksINCh0L_QvtC70YPRh9C10L3RliDQqNGC0LDRgtC4INCQ0LzQtdGA0LjQutC4!5e1!3m2!1suk!2sua!4v1761297774459!5m2!1suk!2sua",
+  "infoBoxes": {
+    "general_flyby_button_titles": {
+      "faq": "Можливі підписи для кнопок у інфобоксі обльоту : queue ,villa, house",
+      "1_outside": "queue",
+      "3_outside": "villa",
+      "1_inside": "house"
+    }
+  },
+  "header": {
+    "logo": "/wp-content/themes/3d/assets/s3d/images/mansion-big-logo-white.png",
+    "menu_selector_default_FAQ": "data-open-menu // виставити це для дефолтного меню модуля, видалити",
+    "menu_selector": "data-open-menu"
+  },
+  "menu_top_img": "/wp-content/themes/3d/assets/s3d/images/mansion-big-logo.png",
+  "currency_label": "$",
+  "currency_value": "USD",
+  "currency_list": [],
+  "show_prices": false,
+  "languages": "en",
+  "show_phoneNumber": false,
+  "hideDocumentation": true,
+  "hideExterior": true,
+  "hideFinancialTerms": true,
+  "hideConstructionProgress": true,
+  "social_media_links_faq": "Якщо строчка пуста, то кнопка не буде відображатися",
+  "social_media_links": {
+    "instagram": "https://www.instagram.com/dorapuig/",
+    "facebook": "https://www.facebook.com/dora.puig",
+    "twitter": "https://twitter.com/DoraPuig",
+    "youtube": "https://www.youtube.com/user/DoraPuig?app=desktop"
+  },
+  "manager_info": {
+    "tel": "(305) 613-2118",
+    "name": {
+      "en": "Dora Puig",
+      "uk": "Dora Puig"
+    },
+    "img": "/wp-content/themes/3d/assets/images-wp/broker_photo.avif",
+    "position": {
+      "en": "Founder/ Principal Broker",
+      "uk": "Founder/ Principal Broker"
+    },
+    "socials": {
+      "instagram": "https://www.instagram.com/dorapuig/",
+      "facebook": "https://www.facebook.com/dora.puig",
+      "twitter": "https://twitter.com/DoraPuig",
+      "youtube": "https://www.youtube.com/user/DoraPuig?app=desktop"
+    }
+  },
+  "g_contacts": {
+    "email": "info@dorapuig.com",
+    "sales_department": {
+      "google_maps_link": "https://maps.app.goo.gl/GbYpDbfWFtDfFgZUA",
+      "text": {
+        "en": "1680 Michigan Avenue, Suite 100 Miami Beach, FL 33139"
+      }
+    }
+  },
+  "g_contact_advantaged_list": [
+    {
+      "en": "Personalized Consultation",
+      "uk": "Персональна консультація"
+    }
+  ],
+  "SLIDER_MOBILE_FINGER_SWIPE": false,
+  "audioAssistant": {
+    "needToInitialize": false,
+    "files": {
+      "flyby_1_outside_1": "/wp-content/themes/3d/static/ElevenLabs_Text_to_Speech_audio.mp3",
+      "plannings": "/wp-content/themes/3d/static/plannings.mp3"
+    }
+  },
+  "menu_tour_link": "https://apartment-tours.smartorange.com.ua/en/english-mension-fisher-island-lot7/?scene=0",
+  "menu_video_link": "https://3d-mension-on-fisher.smartorange.site/wp-content/themes/3d/assets/images-wp/real-estate-v5-v2.mp4",
+  "menu_brochure_link": "/wp-content/themes/3d/assets/images-wp/The Mansions on Fisher Island - brochure (4).pdf",
+  "flat_description_2": {
+    "title": "Share Property",
+    "items": {
+      "facebook": "https://www.facebook.com/sharer/sharer.php?u=https://dorapuig.com/properties/1007-fisher-island-drive-miami-beach-fl-us-33109-f9207bf6dee8f35b6704cc25236b5af5",
+      "twitter": "https://twitter.com/share?url=https://www.dorapuig.com/properties/1007-fisher-island-drive-miami-beach-fl-us-33109-f9207bf6dee8f35b6704cc25236b5af5",
+      "mail": "mailto:?subject=Read More About Fisher Island Mansion No. 7&body=https://www.dorapuig.com/properties/1007-fisher-island-drive-miami-beach-fl-us-33109-f9207bf6dee8f35b6704cc25236b5af5"
+    }
+  }
+}
