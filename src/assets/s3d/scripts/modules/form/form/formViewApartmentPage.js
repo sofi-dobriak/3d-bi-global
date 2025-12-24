@@ -30,7 +30,8 @@ export default class FormViewPage {
         return;
       }
 
-      targetElement.insertAdjacentHTML('beforeend', this.getTemplate());
+      // targetElement.insertAdjacentHTML('beforeend', this.getTemplate());
+      targetElement.insertAdjacentHTML('beforeend', this.s3d2_getTemplate());
       const bttn = this.get$Form().querySelector('.form-progress-button');
 
       this.uIProgressButton = new UIProgressButton(bttn, {
@@ -114,8 +115,76 @@ export default class FormViewPage {
                       <svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
                     </div>
                   </div>
-                  
-                  
+
+
+                </form>
+            </div>
+        </div>
+    `;
+  }
+
+  s3d2_getTemplate() {
+    return `
+        <div class="form-layout-page" id="${this._id}">
+            <div class="s3d2__contact__form">
+                <form data-home-page="data-home-page" autocomplete="off">
+                  <div class="s3d2__contact__form__overflow">
+                    <div class="s3d2-form-field s3d2-form-field-input" data-field-input="data-field-input" data-field-name="data-field-name" data-status="field--inactive">
+                        <div class="s3d2__contact__form__title">
+                          ${this.i18n.t('Flat.contactUs.form.name')}*
+                        </div>
+                        ${TextInput({
+                          text: this.i18n.t('Flat.contactUs.form.name_placeholder'),
+                          className: 's3d2-TextInput',
+                          attributes: 'name="name"',
+                          type: 'text',
+                          value: '',
+                        })}
+                        <div class="input-message" data-input-message="data-input-message"></div>
+                    </div>
+                    <div class="form-field disabled form-field-input" data-field-input="data-field-input" data-field-phone="data-field-phone" data-status="field--inactive">
+                        <div class="s3d2__contact__form__title">
+                          ${this.i18n.t('Flat.contactUs.form.phone')}:*
+                        </div>
+                        ${TextInput({
+                          text: '',
+                          className: '',
+                          attributes: 'name="phone"',
+                          type: 'text',
+                          value: '',
+                        })}
+                        <div class="input-message" data-input-message="data-input-message"></div>
+                    </div>
+                    <div class="form-field form-field-input" data-field-input="data-field-input" data-field-message="data-field-message" data-status="field--inactive">
+                        <div class="s3d2__contact__form__title">
+                          ${this.i18n.t('Flat.contactUs.form.email')}:
+                        </div>
+                        ${TextInput({
+                          text: this.i18n.t('Flat.contactUs.form.email_placeholder'),
+                          className: '',
+                          attributes: 'name="email"',
+                          type: 'email',
+                          value: '',
+                        })}
+                        <div class="input-message" data-input-message="data-input-message"></div>
+                    </div>
+                  </div>
+                  <div class="s3d2__contact__form__submit-wrapper">
+                    <div class="form-progress-button">
+                      <button type="submit" data-btn-submit><span>${i18next.t(
+                        'send',
+                      )}</span></button>
+                      <svg class="form-progress-circle" width="30" height="30" viewBox="0 0 70 70">
+                        <path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/>
+                      </svg>
+
+                      <svg class="checkmark" width="50" height="50" viewBox="0 0 70 70"><path d="m31.5,46.5l15.3,-23.2"/>
+                        <path d="m31.5,46.5l-8.5,-7.1"/></svg>
+                      <svg class="cross" width="30" height="30" viewBox="0 0 70 70"><path d="m35,35l-9.3,-9.3"/>
+                        <path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/>
+                      </svg>
+                    </div>
+                  </div>
                 </form>
             </div>
         </div>

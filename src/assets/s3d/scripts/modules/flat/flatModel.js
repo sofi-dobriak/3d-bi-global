@@ -450,8 +450,9 @@ class FlatModel extends EventEmitter {
     }
 
     addAnimateBtnTabs('.s3d-flat__button', '.js-s3d__btn-tab-svg');
+    const explicationButton = document.querySelector('[data-flat-explication-button]');
     setTimeout(() => {
-      document.querySelector('[data-flat-explication-button]').click();
+      if (explicationButton) explicationButton.click();
     }, 3000);
   }
 

@@ -64,7 +64,7 @@ export default function header_2(i18n, { logo, menuSelector, config = {} }) {
     $languageList && $languageList.length > 1
       ? `
   <div class="lang-wrap">
-    <ul class="language-list">
+    <ul class="language-list language-list--dark">
       ${$languageList
         .map(lang => {
           const isActive = document.querySelector('html').getAttribute('lang') === lang;
@@ -179,11 +179,7 @@ export default function header_2(i18n, { logo, menuSelector, config = {} }) {
             ? IconButton('IconButton--dark', 'data-fullscreen-mode-off', 'Cancel full screen')
             : ''
         }
-        ${IconButton(
-          'js-s3d__favourite-open IconButton--dark',
-          'data-compare-go-to-page',
-          'Compare',
-        )}
+        ${$favourite()}
         ${
           menuSelector
             ? ButtonIconRight(

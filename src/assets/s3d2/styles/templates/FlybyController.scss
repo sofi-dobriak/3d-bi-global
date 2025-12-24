@@ -1,4 +1,3 @@
-
 .FlybyControllerWrapper {
   position: fixed;
   left: 0;
@@ -7,7 +6,7 @@
   height: 100%;
   z-index: 101;
   pointer-events: none;
-  &>* {
+  & > * {
     pointer-events: all;
   }
 
@@ -15,12 +14,17 @@
     position: absolute;
     left: var(--space-4);
     top: calc(var(--s3d-header) + var(--space-1));
+
+    svg {
+      path {
+        fill: var(--icon-gray-200) !important;
+      }
+    }
   }
   .s3d__compass {
     position: absolute;
     right: var(--space-4);
     top: calc(var(--s3d-header) + var(--space-1));
-  
   }
 }
 .FlybyController {
@@ -32,10 +36,10 @@
   padding: var(--space-4);
   z-index: 100;
   width: calc(180px + var(--space-4) * 2);
-  &>:nth-child(n+2) {
+  & > :nth-child(n + 2) {
     margin-top: var(--space-1);
   }
-  &>:empty {
+  & > :empty {
     display: none;
   }
   &__row {
@@ -44,18 +48,17 @@
     justify-content: flex-start;
     gap: var(--space-1);
   }
-  &>.ButtonWithoutIcon {
+  & > .ButtonWithoutIcon {
     text-align: left;
   }
 
   .s3dFlybySideChooser {
     .ButtonWithoutIcon {
       padding-top: 3px;
-      padding-bottom: 3px; 
+      padding-bottom: 3px;
     }
   }
 }
-
 
 .tablet,
 .mobile {

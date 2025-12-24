@@ -36,6 +36,9 @@ import { SMARTO_TOURS_CONTAINER_SELECTOR } from '../../../../../s3d2/scripts/mod
 import getConfig from '../../../../../s3d2/scripts/getConfig';
 import { socialMediaIcons } from '../../../../../s3d2/scripts/templates/common/icons/social-media-icons';
 import { SMARTO_TOURS_V3_CONTAINER_SELECTOR } from '../../../../../s3d2/scripts/modules/AudioAssistant/SmartoToursV3';
+import s32d_renderVillaContact, {
+  s3d2_initializeVillaContact,
+} from './villa/contactUs/s3d2_villaContactUs';
 
 /**
  * Represents a Flat object.
@@ -77,14 +80,30 @@ function Flat(
   project_google_map_location,
   faq_questions = [],
 ) {
-
   const CONFIG = getConfig();
 
   const contactFormHtml1 = renderVillaContact(i18n, managerInfo, contactAdvantagesList);
   const contactFormHtml2 = renderVillaContact(i18n, managerInfo, contactAdvantagesList);
 
+  const s3d2_contactFormHtml1 = s32d_renderVillaContact('v1', { i18n, managerInfo });
+  const s3d2_contactFormHtml2 = s32d_renderVillaContact('v2', {
+    i18n,
+    socialMediaLinks,
+    contacts,
+    project_google_map_location,
+  });
+  const s3d2_contactFormHtml3 = s32d_renderVillaContact('v3', {
+    i18n,
+    managerInfo,
+    project_google_map_location,
+  });
+
   const contactFormContainerId1 = extractContainerId(contactFormHtml1);
   const contactFormContainerId2 = extractContainerId(contactFormHtml2);
+
+  const s3d2_contactFormContainerId1 = extractContainerId(s3d2_contactFormHtml1);
+  const s3d2_contactFormContainerId2 = extractContainerId(s3d2_contactFormHtml2);
+  const s3d2_contactFormContainerId3 = extractContainerId(s3d2_contactFormHtml3);
 
   const isChecked = favouritesIds$.value.includes(flat.id);
 
@@ -111,21 +130,32 @@ function Flat(
       $specifiedFlybysByGroup,
     })}
     <div class="s3d-villa__container">
+      ${s3dDashboard(i18n, flat, $specifiedFlybysByGroup, showPrices, contacts)}
       ${flat['3d_tour'] ? VirtualTour(i18n, flat) : ''}
-      ${flat['3d_tour_v2'] ? `
+      ${
+        flat['3d_tour_v2']
+          ? `
         <div class="s3d-villa__gallery-wrap" style="padding-top: 0;">
           <div ${SMARTO_TOURS_CONTAINER_SELECTOR.replace(/\[|\]/g, '')}></div>
         </div>
-      ` : ``}
-      ${flat['3d_tour_v3'] ? `
+      `
+          : ``
+      }
+      ${
+        flat['3d_tour_v3']
+          ? `
         <div class="s3d-villa__gallery-wrap" style="padding-top: 0;">
           <div ${SMARTO_TOURS_V3_CONTAINER_SELECTOR.replace(/\[|\]/g, '')}></div>
         </div>
-      ` : ``}
-      ${s3dDashboard(i18n, flat, $specifiedFlybysByGroup, showPrices)}
+      `
+          : ``
+      }
+
       <div class="s3d-villa__video-screen" style="padding-top: var(--space-5);     padding-left: var(--space-6);padding-right: var(--space-6);">
         <div class="s3d-villa-description-screen">
-          <div class="s3d-villa-description-screen-item" ${!flat.description ? 'style="display:none;"' : ''}>
+          <div class="s3d-villa-description-screen-item" ${
+            !flat.description ? 'style="display:none;"' : ''
+          }>
             <div class="s3d-villa-description-screen-item-title">
               Description
             </div>
@@ -133,26 +163,37 @@ function Flat(
               ${flat.description}
             </div>
           </div>
-          <div class="s3d-villa-description-screen-item" ${Object.entries(CONFIG.flat_description_2.items).length === 0 ? 'style="display:none;"' : ''}>
+          <div class="s3d-villa-description-screen-item" ${
+            Object.entries(CONFIG.flat_description_2.items).length === 0
+              ? 'style="display:none;"'
+              : ''
+          }>
             <div class="s3d-villa-description-screen-item-title">
               ${CONFIG.flat_description_2.title}
             </div>
             <div class="s3d-villa-description-screen-item-text">
-              ${Object.entries(CONFIG.flat_description_2.items).map(([name, value]) => `
+              ${Object.entries(CONFIG.flat_description_2.items)
+                .map(
+                  ([name, value]) => `
                 <a href="${value}" class="s3d-villa__contact-location-intro-item__social-item" target="_blank">
                   ${socialMediaIcons[name]}
                 </a>
-              `).join('')}
+              `,
+                )
+                .join('')}
             </div>
           </div>
-          
+
         </div>
 
       </div>
       ${s3dFlatFloor(i18n, flat, isChecked, flybyLists)}
       ${s3dFloorPlan(i18n, flat, floorList)}
       ${$additionalAmenities(flat)}
-      ${contactFormHtml1}
+      <!-- ${s3d2_contactFormHtml1} -->
+      ${s3d2_contactFormHtml2}
+      <!-- ${s3d2_contactFormHtml3} -->
+      <!-- ${contactFormHtml1} -->
       ${
         flat['view_from_window_link']
           ? `
@@ -187,7 +228,7 @@ function Flat(
           : ''
       }
       ${s3dApartmentsList(i18n, flat, favouritesIds$, showPrices, otherTypeFlats)}
-      ${renderFaqList(i18n, faq_questions, flat)} 
+      ${renderFaqList(i18n, faq_questions, flat)}
       ${VillaFinancialTermsScreen(i18n, financialTermsData)}
       ${FlatDocumentationScreen(i18n, projectDocs)}
       ${FlatConstructionProgressScreen(i18n, constructionProgressDataList)}
@@ -201,10 +242,9 @@ function Flat(
         )}
         ${contactFormHtml2}
       </div>
-      
+
 
       <div last-screen-animation>
-        
         <div class="s3d-flat-new__bottom" ></div>
       </div>
     </div>
@@ -219,6 +259,12 @@ function Flat(
   }
 
   initializeContactForms(contactFormContainerId1, contactFormContainerId2, i18n);
+  s32d_initializeContactForms(
+    s3d2_contactFormContainerId1,
+    s3d2_contactFormContainerId2,
+    s3d2_contactFormContainerId3,
+    i18n,
+  );
 
   return flatHtml;
 }
@@ -262,6 +308,20 @@ function initializeContactForms(id1, id2, i18n) {
   }, 0);
 }
 
+function s32d_initializeContactForms(id1, id2, id3, i18n) {
+  setTimeout(() => {
+    if (id1) {
+      s3d2_initializeVillaContact(id1, i18n);
+    }
+    if (id2) {
+      s3d2_initializeVillaContact(id2, i18n);
+    }
+    if (id3) {
+      s3d2_initializeVillaContact(id3, i18n);
+    }
+  }, 0);
+}
+
 function renderFlatFlyby(link, flatId, flat, getFlat) {
   axios.get(link).then(el => {
     const container = document.querySelector('[data-flat-flyby-svg-container]');
@@ -299,7 +359,6 @@ function renderFlatFlyby(link, flatId, flat, getFlat) {
 
 export default Flat;
 
-
 function $additionalAmenities(flat) {
   if (!window.s3dAdditionalServices || !window.s3dAdditionalServices[flat.id]) {
     return ``;
@@ -315,20 +374,34 @@ function $additionalAmenities(flat) {
         <div class="s3d-villa__floor__title-wrap__line"></div>
       </div>
       <div class="s3d-villa__additional-amenities">
-      
-      ${data.map(item => `
+
+      ${data
+        .map(
+          item => `
         <div class="s3d-villa__additional-amenities-item">
-          ${item.title ? `<h3 class="s3d-villa__additional-amenities-title">${item.title}</h3>` : ''}
+          ${
+            item.title ? `<h3 class="s3d-villa__additional-amenities-title">${item.title}</h3>` : ''
+          }
           <ul class="s3d-villa__additional-amenities-list">
-            ${item.features.map(feature => `
+            ${item.features
+              .map(
+                feature => `
               <li class="s3d-villa__additional-amenities-list-item">
-                ${Object.entries(feature).map(([key, value]) => `
+                ${Object.entries(feature)
+                  .map(
+                    ([key, value]) => `
                   <span class="s3d-villa__additional-amenities-list-item-key">${key}:</span>
-                  <span class="s3d-villa__additional-amenities-list-item-value">${value}</span>`).join('')}
-              </li>`).join('')}
+                  <span class="s3d-villa__additional-amenities-list-item-value">${value}</span>`,
+                  )
+                  .join('')}
+              </li>`,
+              )
+              .join('')}
             </ul>
           </div>
-        `).join('')}
+        `,
+        )
+        .join('')}
       </div>
     </div>
   `;

@@ -459,18 +459,20 @@ class AppModel extends EventEmitter {
       const target = evt.target.closest('[data-s3d-share]');
       if (!target) return;
       // share(target);
-      
+
       // Toastify({
       //   text: this.i18n.t('ctr.share.link-copied'),
       //   duration: 1500,
       // alert(navigator.canShare);
       // }).showToast();
-      navigator.share({
-        url: window.location.href,
-        text: 'Share Mansion On Fisher',
-      }).catch(() => {
-        // console.log('Share failed');
-      });
+      navigator
+        .share({
+          url: window.location.href,
+          text: 'Share Mansion On Fisher',
+        })
+        .catch(() => {
+          // console.log('Share failed');
+        });
     });
 
     window.addEventListener('updateFsm', evt => {
@@ -613,8 +615,7 @@ class AppModel extends EventEmitter {
       this.defaultFlybySettings = {
         type: 'intro',
       };
-    }
-    else if (config['genplan']) {
+    } else if (config['genplan']) {
       this.defaultFlybySettings = {
         type: 'genplan',
       };

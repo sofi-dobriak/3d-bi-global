@@ -62,13 +62,13 @@ export default function FlybyController(i18n) {
       'intro',
       'favourites',
     ])}>
-      ${$compass(i18n)}
-      <button type="button" hidden class="ButtonIconLeft ButtonIconLeft--filter js-ctr-btn js-s3d-ctr__filter FlybyControllerWrapper-filter-call-button">
+    <!--  ${$compass(i18n)} -->
+      <button type="button" class="ButtonIconLeft ButtonIconLeft--dark ButtonIconLeft--filter js-ctr-btn js-s3d-ctr__filter FlybyControllerWrapper-filter-call-button">
         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_875_775)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 3C11.5 1.89543 12.3954 1 13.5 1C14.6046 1 15.5 1.89543 15.5 3C15.5 4.10457 14.6046 5 13.5 5C12.3954 5 11.5 4.10457 11.5 3ZM10.5415 3.5H0V2.5H10.5415C10.7795 1.08114 12.0135 0 13.5 0C14.9865 0 16.2205 1.08114 16.4585 2.5H39.5V3.5H16.4585C16.2205 4.91886 14.9865 6 13.5 6C12.0135 6 10.7795 4.91886 10.5415 3.5Z" fill="#1A1E21"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 9C3.5 7.89543 4.3954 7 5.5 7C6.6046 7 7.5 7.89543 7.5 9C7.5 10.1046 6.6046 11 5.5 11C4.3954 11 3.5 10.1046 3.5 9ZM2.5415 9.5H-8V8.5H2.5415C2.7795 7.08114 4.0135 6 5.5 6C6.9865 6 8.2205 7.08114 8.4585 8.5H20V9.5H8.4585C8.2205 10.9189 6.9865 12 5.5 12C4.0135 12 2.7795 10.9189 2.5415 9.5Z" fill="#1A1E21"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15C11.5 13.8954 12.3954 13 13.5 13C14.6046 13 15.5 13.8954 15.5 15C15.5 16.1046 14.6046 17 13.5 17C12.3954 17 11.5 16.1046 11.5 15ZM10.5415 15.5H0V14.5H10.5415C10.7795 13.0811 12.0135 12 13.5 12C14.9865 12 16.2205 13.0811 16.4585 14.5H39.5V15.5H16.4585C16.2205 16.9189 14.9865 18 13.5 18C12.0135 18 10.7795 16.9189 10.5415 15.5Z" fill="#1A1E21"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 3C11.5 1.89543 12.3954 1 13.5 1C14.6046 1 15.5 1.89543 15.5 3C15.5 4.10457 14.6046 5 13.5 5C12.3954 5 11.5 4.10457 11.5 3ZM10.5415 3.5H0V2.5H10.5415C10.7795 1.08114 12.0135 0 13.5 0C14.9865 0 16.2205 1.08114 16.4585 2.5H39.5V3.5H16.4585C16.2205 4.91886 14.9865 6 13.5 6C12.0135 6 10.7795 4.91886 10.5415 3.5Z" fill="none"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 9C3.5 7.89543 4.3954 7 5.5 7C6.6046 7 7.5 7.89543 7.5 9C7.5 10.1046 6.6046 11 5.5 11C4.3954 11 3.5 10.1046 3.5 9ZM2.5415 9.5H-8V8.5H2.5415C2.7795 7.08114 4.0135 6 5.5 6C6.9865 6 8.2205 7.08114 8.4585 8.5H20V9.5H8.4585C8.2205 10.9189 6.9865 12 5.5 12C4.0135 12 2.7795 10.9189 2.5415 9.5Z" fill="none"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15C11.5 13.8954 12.3954 13 13.5 13C14.6046 13 15.5 13.8954 15.5 15C15.5 16.1046 14.6046 17 13.5 17C12.3954 17 11.5 16.1046 11.5 15ZM10.5415 15.5H0V14.5H10.5415C10.7795 13.0811 12.0135 12 13.5 12C14.9865 12 16.2205 13.0811 16.4585 14.5H39.5V15.5H16.4585C16.2205 16.9189 14.9865 18 13.5 18C12.0135 18 10.7795 16.9189 10.5415 15.5Z" fill="none"/>
           </g>
           <defs>
           <clipPath id="clip0_875_775">
@@ -91,14 +91,19 @@ export default function FlybyController(i18n) {
         ${isDesktop ? $s3dFlybySideChooser(i18n, config) : ''}
         ${showOn(['desktop'], $flatFloorChooser(i18n))}
         ${$highlightSvgElements(i18n)}
-        ${ButtonWithoutIcon(
-          'js-s3d-flat__3d-tour',
-          `data-href="${config.project_google_map_location}" data-title="${i18n.t(
-            'ctr.menu.on_the_map',
-          )}"`,
-          i18n.t('ctr.menu.on_the_map'),
-        )}
-        ${ButtonWithoutIcon('', 'data-open-form', i18n.t('ctr.menu.callbackFormCall'), 'secondary')}
+      <!--  ${ButtonWithoutIcon(
+        'js-s3d-flat__3d-tour',
+        `data-href="${config.project_google_map_location}" data-title="${i18n.t(
+          'ctr.menu.on_the_map',
+        )}"`,
+        i18n.t('ctr.menu.on_the_map'),
+      )} -->
+      <!--  ${ButtonWithoutIcon(
+        '',
+        'data-open-form',
+        i18n.t('ctr.menu.callbackFormCall'),
+        'secondary',
+      )} -->
       </div>
       ${SpinNav(i18n)}
     </div>

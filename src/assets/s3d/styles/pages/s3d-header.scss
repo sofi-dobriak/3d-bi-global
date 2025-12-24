@@ -109,6 +109,14 @@
   cursor: pointer;
   transition: all 0.3s linear;
 
+  &--dark {
+    border-radius: var(--Spacing-Corner-radius-radius-2, 8px);
+    background: var(--colors-gray-900-transparent-60, rgba(26, 30, 33, 0.6));
+    backdrop-filter: blur(20px);
+    border-color: transparent;
+    color: var(--text-gray-200);
+  }
+
   input {
     display: none;
 
@@ -174,13 +182,16 @@
     height: var(--icon24);
     width: var(--icon24);
     stroke: none;
-    fill: var(--icon-gray-900);
+    // fill: var(--icon-gray-900);
+    fill: var(--icon-gray-200);
     transition: all 0.3s linear;
   }
 
   &:hover {
-    border-color: var(--border-gray-600-transparent-88);
-    background-color: var(--color-surface-gray-400-transperent-88);
+    // border-color: var(--border-gray-600-transparent-88);
+    // background-color: var(--color-surface-gray-400-transperent-88);
+    border-color: transparent;
+    background: var(--colors-surface-gray-surface-gray-900-transparent-80, rgba(26, 30, 33, 0.8));
 
     svg {
       transition: all 0.3s linear;

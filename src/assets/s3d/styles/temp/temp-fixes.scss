@@ -6,7 +6,7 @@
     .swiper-slide
     .s3d-villa__floor-explication-screen-slide
     img {
-    height: auto !important;
+    // height: auto !important;
   }
   .s3d-villa__floor {
     padding-bottom: 0 !important;
@@ -48,7 +48,7 @@
     [data-hide-elements="genplan"],
     [data-s3d2-header-flyby-dropdown],
     [data-header-floor-plan-group],
-    [data-type="flyby"] .MenuMobileButton.js-s3d-ctr__filter,
+    // [data-type="flyby"] .MenuMobileButton.js-s3d-ctr__filter,
     .MobileNavigationMenu .ButtonWithoutIcon.js-s3d-nav__btn[data-type="floor"],
     .MobileFunctionsMenu>:nth-last-child(1),
     .MobileFunctionsMenu>:nth-last-child(2),

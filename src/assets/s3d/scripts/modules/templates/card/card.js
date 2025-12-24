@@ -150,7 +150,7 @@ function Card(
         <!-- ${$number(i18n, flat)} -->
       </div>
       <div class="s3d-card__middle">
-        <div>${i18n.t('ctr.nav.flat')} ${number}</div>
+        <div>${i18n.t('Flat.information.rooms')}: ${rooms}</div>
         <div class="decorative-slash">/</div>
         <div>${area} ${i18n.t('Flat.information.area_unit')}</div>
         <!-- <div>${area} м²</div> -->
@@ -166,11 +166,13 @@ function Card(
         ${$price()}
         <div class="s3d-card__info-label-wrapper">
           <div class="s3d-card__info-label">
-            ${flat.rooms} Beds
+            ${i18n.t('Flat.information.build')}: ${build}
           </div>
           <div class="s3d-card__info-label">
-           <!-- ${flat.parking_spots} Baths -->
-           ${baths} Baths
+            ${i18n.t('Flat.information.floor')}: ${floor}
+          </div>
+          <div class="s3d-card__info-label">
+            ${i18n.t('Flat.information.number')}: ${number}
           </div>
         </div>
         <!-- <div class="s3d-card__buttons">

@@ -203,7 +203,7 @@ export default function navBar(i18n, { logo }) {
 
   return `
     <header class="s3d2-header" ${hideElementsAttribute(['intro'])}>
-      <a class="s3d2-header__logo" href="/">
+      <a class="s3d2-header__logo" href="/3d">
         ${$logo}
       </a>
       <button class="s3d2-header__back-button" data-history-back-button disabled>
@@ -211,18 +211,18 @@ export default function navBar(i18n, { logo }) {
         <span>${i18n.t('ctr.nav.back')}</span>
       </button>
       <div class="s3d2-header__hide-block">
-        <button title="${i18n.t(
-          'ctr.nav.plannings',
-        )}" class="s3d2-header__back-button js-s3d-nav__btn" type="button" data-type="plannings" data-s3d2-header-plannings>
-        <svg class="s3d2-header__back-button-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 16 16">
-          <path class="cubes x1y1" fill-rule="evenodd" clip-rule="evenodd" d="M1 0.25C0.585786 0.25 0.25 0.585786 0.25 1V6C0.25 6.41421 0.585786 6.75 1 6.75H6C6.41421 6.75 6.75 6.41421 6.75 6V1C6.75 0.585786 6.41421 0.25 6 0.25H1ZM1 6V1H6V6H1Z" fill="#1A1E21"/>
+       <button title="${i18n.t(
+         'ctr.nav.plannings',
+       )}" class="s3d2-header__back-button js-s3d-nav__btn" type="button" data-type="plannings" data-s3d2-header-plannings>
+          <svg class="s3d2-header__back-button-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 16 16">
+            <path class="cubes x1y1" fill-rule="evenodd" clip-rule="evenodd" d="M1 0.25C0.585786 0.25 0.25 0.585786 0.25 1V6C0.25 6.41421 0.585786 6.75 1 6.75H6C6.41421 6.75 6.75 6.41421 6.75 6V1C6.75 0.585786 6.41421 0.25 6 0.25H1ZM1 6V1H6V6H1Z" fill="#1A1E21"/>
           <path class="cubes x1y2" fill-rule="evenodd" clip-rule="evenodd" d="M1 9.25C0.585786 9.25 0.25 9.58579 0.25 10V15C0.25 15.4142 0.585786 15.75 1 15.75H6C6.41421 15.75 6.75 15.4142 6.75 15V10C6.75 9.58579 6.41421 9.25 6 9.25H1ZM1 15V10H6V15H1Z" fill="#1A1E21"/>
-          <!--<path class="cubes x2y1" fill-rule="evenodd" clip-rule="evenodd" d="M9.25 1C9.25 0.585786 9.58579 0.25 10 0.25H15C15.4142 0.25 15.75 0.585786 15.75 1V6C15.75 6.41421 15.4142 6.75 15 6.75H10C9.58579 6.75 9.25 6.41421 9.25 6V1ZM9.25 6V1H15V6H9.25Z" fill="#1A1E21"/>-->
-          <path class="cubes x2y1" fill-rule="evenodd" clip-rule="evenodd" d="M9.25 1C9.25 0.585786 9.58579 0.25 10 0.25H15C15.4142 0.25 15.75 0.585786 15.75 1V6C15.75 6.41421 15.4142 6.75 15 6.75H10C9.58579 6.75 9.25 6.41421 9.25 6V1ZM9.25 6V1H15V6H9.25M9.75 1V6H8.75V1H9.75" fill="#1A1E21"/>
-          <path class="cubes x2y2" fill-rule="evenodd" clip-rule="evenodd" d="M10 9.25C9.58579 9.25 9.25 9.58579 9.25 10V15C9.25 15.4142 9.58579 15.75 10 15.75H15C15.4142 15.75 15.75 15.4142 15.75 15V10C15.75 9.58579 15.4142 9.25 15 9.25H10ZM10 15V10H15V15H10Z" fill="#1A1E21"/>
-        </svg>
-
+            <!--<path class="cubes x2y1" fill-rule="evenodd" clip-rule="evenodd" d="M9.25 1C9.25 0.585786 9.58579 0.25 10 0.25H15C15.4142 0.25 15.75 0.585786 15.75 1V6C15.75 6.41421 15.4142 6.75 15 6.75H10C9.58579 6.75 9.25 6.41421 9.25 6V1ZM9.25 6V1H15V6H9.25Z" fill="#1A1E21"/>-->
+            <path class="cubes x2y1" fill-rule="evenodd" clip-rule="evenodd" d="M9.25 1C9.25 0.585786 9.58579 0.25 10 0.25H15C15.4142 0.25 15.75 0.585786 15.75 1V6C15.75 6.41421 15.4142 6.75 15 6.75H10C9.58579 6.75 9.25 6.41421 9.25 6V1ZM9.25 6V1H15V6H9.25M9.75 1V6H8.75V1H9.75" fill="#1A1E21"/>
+            <path class="cubes x2y2" fill-rule="evenodd" clip-rule="evenodd" d="M10 9.25C9.58579 9.25 9.25 9.58579 9.25 10V15C9.25 15.4142 9.58579 15.75 10 15.75H15C15.4142 15.75 15.75 15.4142 15.75 15V10C15.75 9.58579 15.4142 9.25 15 9.25H10ZM10 15V10H15V15H10Z" fill="#1A1E21"/>
+          </svg>
         </button>
+
         ${
           config.genplan
             ? `<button class="s3d2-header__nav-button js-s3d-nav__btn" data-type="flyby" data-flyby="1" data-side="outside">

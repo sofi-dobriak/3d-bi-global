@@ -116,12 +116,11 @@ class FlatView extends EventEmitter {
       this.emit('mouseoverFlatHandler', target);
     });
 
-    model.wrapper.addEventListener('click', (evt) => {
+    model.wrapper.addEventListener('click', evt => {
       const scrollDownButton = evt.target.closest('[href="#toScroll"]');
       if (!scrollDownButton) return;
       evt.preventDefault();
       document.querySelector('[id="toScroll"]').scrollIntoView({ behavior: 'smooth' });
-
     });
 
     document.body.addEventListener('click', event => {

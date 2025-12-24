@@ -30,46 +30,63 @@ function fsm() {
           this.changeViewBlock(config.id);
           this.iteratingConfig();
 
-          
-          window.addEventListener('intro-video-loaded', ()=> {
-            if (this['flyby_1_outside']) return;
-  
-            config['typeCreateBlock'] = 'canvas';
-            config.id = 'flyby_1_outside';
-            config.type = 'flyby';
-            config.settings = {
-              flyby: "1",
-              side: 'outside',
-              type: 'flyby',
-            }
-  
-            config = {
-              ...config,
-              ...getConfig()['flyby']["1"]['outside'],
-            };
-            
-            this.emit('createWrapper', config);
-            config['wrapper'] = $(`.js-s3d__wrapper__${config.id}`);
-            config['wrapperSvg'] = document.querySelector(`#js-s3d__svg-${config.id}`);
-  
-  
-            const sliderDataWithHistory = {  flatId: config.history.history.markedFlat, ...sliderData};
-            const courtyardModel = new SliderModel({ ...config, sliderDataWithHistory, cbOnInit: cb}, i18n);
-            const courtyardView = new SliderView(courtyardModel, {
-              wrapper: config['wrapper'],
-              wrapperSvg: config['wrapperSvg'] ,
-              wrapperEvent: '.js-s3d__svgWrap',
-            });
-            const complexController = new SliderController(courtyardModel, courtyardView);
-            this['flyby_1_outside'] = courtyardModel;
-            courtyardModel.init(config.flatId, config.settings.slides);
-          }, {
-            once: true
-          });
+          window.addEventListener(
+            'intro-video-loaded',
+            () => {
+              if (this['flyby_1_outside']) return;
+
+              config['typeCreateBlock'] = 'canvas';
+              config.id = 'flyby_1_outside';
+              config.type = 'flyby';
+              config.settings = {
+                flyby: '1',
+                side: 'outside',
+                type: 'flyby',
+              };
+
+              config = {
+                ...config,
+                ...getConfig()['flyby']['1']['outside'],
+              };
+
+              this.emit('createWrapper', config);
+              config['wrapper'] = $(`.js-s3d__wrapper__${config.id}`);
+              config['wrapperSvg'] = document.querySelector(`#js-s3d__svg-${config.id}`);
+
+              const sliderDataWithHistory = {
+                flatId: config.history.history.markedFlat,
+                ...sliderData,
+              };
+              const courtyardModel = new SliderModel(
+                {
+                  ...config,
+                  sliderDataWithHistory,
+                  cbOnInit: cb,
+                },
+                i18n,
+              );
+              const courtyardView = new SliderView(courtyardModel, {
+                wrapper: config['wrapper'],
+                wrapperSvg: config['wrapperSvg'],
+                wrapperEvent: '.js-s3d__svgWrap',
+              });
+              const complexController = new SliderController(courtyardModel, courtyardView);
+              this['flyby_1_outside'] = courtyardModel;
+              courtyardModel.init(config.flatId, config.settings.slides);
+
+              // ДОДАЙ ЦЕ!!!
+              if (has(this, 'helper')) {
+                console.log('!!! ВИКЛИКАЄМО HELPER.INIT ПІСЛЯ INTRO !!!');
+                this.helper.init();
+              }
+            },
+            {
+              once: true,
+            },
+          );
           // genplan init start
 
           // genplan init end
-          
         } else {
           this[config.id].init(config, i18n);
           this.changeViewBlock(config.id);
@@ -82,11 +99,17 @@ function fsm() {
           this.emit('createWrapper', config);
           config['wrapper'] = $(`.js-s3d__wrapper__${config.id}`);
           config['wrapperSvg'] = document.querySelector(`#js-s3d__svg-${config.id}`);
-          const sliderDataWithHistory = {  flatId: config.history.history.markedFlat, ...sliderData};
-          const courtyardModel = new SliderModel({ ...config, sliderDataWithHistory, cbOnInit: cb}, i18n);
+          const sliderDataWithHistory = {
+            flatId: config.history.history.markedFlat,
+            ...sliderData,
+          };
+          const courtyardModel = new SliderModel(
+            { ...config, sliderDataWithHistory, cbOnInit: cb },
+            i18n,
+          );
           const courtyardView = new SliderView(courtyardModel, {
             wrapper: config['wrapper'],
-            wrapperSvg: config['wrapperSvg'] ,
+            wrapperSvg: config['wrapperSvg'],
             wrapperEvent: '.js-s3d__svgWrap',
           });
           const complexController = new SliderController(courtyardModel, courtyardView);
@@ -109,12 +132,18 @@ function fsm() {
           this.emit('createWrapper', config);
           config['wrapper'] = $(`.js-s3d__wrapper__${config.id}`);
           config['wrapperSvg'] = document.querySelector(`#js-s3d__svg-${config.id}`);
-          const sliderDataWithHistory = {  flatId: config.history.history.markedFlat, ...sliderData};
-          const complexModel = new SliderModel({ ...config, sliderDataWithHistory, cbOnInit: cb}, i18n);
+          const sliderDataWithHistory = {
+            flatId: config.history.history.markedFlat,
+            ...sliderData,
+          };
+          const complexModel = new SliderModel(
+            { ...config, sliderDataWithHistory, cbOnInit: cb },
+            i18n,
+          );
           const complexView = new SliderView(complexModel, {
             wrapper: config['wrapper'],
             wrapperEvent: '.js-s3d__svgWrap',
-            wrapperSvg: config['wrapperSvg']
+            wrapperSvg: config['wrapperSvg'],
           });
           const complexController = new SliderController(complexModel, complexView);
           complexModel.init(config.flatId, config.settings.slides);
@@ -125,12 +154,27 @@ function fsm() {
         } else if (sliderData) {
           if (sliderData.showLoader) {
           }
-          const sliderDataWithHistory = {  flatId: config.history.history.markedFlat, ...sliderData};
-          this[config.id].toControlPoint(sliderData.flatId, sliderDataWithHistory.controlPoint, config.history.history.markedFlat);
+          const sliderDataWithHistory = {
+            flatId: config.history.history.markedFlat,
+            ...sliderData,
+          };
+          this[config.id].toControlPoint(
+            sliderData.flatId,
+            sliderDataWithHistory.controlPoint,
+            config.history.history.markedFlat,
+          );
         } else if (change) {
-          this[config.id].toSlideNum(config.flatId, config.settings.slides, config.history.history.markedFlat);
+          this[config.id].toSlideNum(
+            config.flatId,
+            config.settings.slides,
+            config.history.history.markedFlat,
+          );
         } else {
-          this[config.id].showDifferentPointWithoutRotate(config.settings.slides, config.flatId, config.history.history.markedFlat);
+          this[config.id].showDifferentPointWithoutRotate(
+            config.settings.slides,
+            config.flatId,
+            config.history.history.markedFlat,
+          );
         }
         this.changeViewBlock(config.id);
         this.iteratingConfig();
@@ -199,7 +243,11 @@ function fsm() {
       },
     },
     dispatch(settings, self, payload, i18n, sliderData, cb) {
-      if (settings.type !== this.state || +settings.flyby !== this.settings.flyby || settings.side !== this.settings.side) {
+      if (
+        settings.type !== this.state ||
+        +settings.flyby !== this.settings.flyby ||
+        settings.side !== this.settings.side
+      ) {
         this.state = settings.type;
         this.settings = settings;
       }

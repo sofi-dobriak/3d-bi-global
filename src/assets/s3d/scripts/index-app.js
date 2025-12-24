@@ -105,7 +105,10 @@ gsap.registerPlugin(ScrollTrigger);
 global.axios = axios;
 
 const createHtml = (i18n, config) => {
-  const controllerNode = Controller(i18n, config, `
+  const controllerNode = Controller(
+    i18n,
+    config,
+    `
     ${FlybyController(i18n)}
     <div class="s3d-ctr__audio" data-s3d-audio-guide-state-marker>
       <div class="s3d-ctr__audio-canvas-wrap" data-s3d2-audio-assistant>
@@ -136,7 +139,8 @@ const createHtml = (i18n, config) => {
         </svg>
       </div>
     </div>
-  `);
+  `,
+  );
   const planningsNode = Plannings(i18n);
   const favouritesNode = Favourites(i18n, 0);
   const filterNode = Filter(i18n, config.filter.checkboxes);
@@ -145,7 +149,7 @@ const createHtml = (i18n, config) => {
     'afterbegin',
     [controllerNode, planningsNode, favouritesNode, filterNode].join(''),
   );
-  document.body.insertAdjacentHTML('beforeend', loader(get(config, 'header.logo', null)));
+  document.body.insertAdjacentHTML('beforeend', loader(get(config, 'header.logo_2', null)));
   document.body.insertAdjacentHTML('beforeend', percentLoader(i18n));
   // document.body.insertAdjacentHTML('beforeend', header(i18n));
   document.body.insertAdjacentHTML('beforeend', menu(i18n, config));
@@ -416,24 +420,19 @@ const switchCreationFunction = Config => {
   }
 };
 
-
 if (/localhost/.test(window.location.href)) {
-  window.s3dAdditionalServices = /localhost/.test(window.location.href) ? {
-          26219: [
-              {
-                  "title": "Interior",
-                  "features": [
-                  { "total bedrooms": "6" },
-                  { "full bathrooms": "7" }
-                  ]
-              },
-              {
-                  "title": "Area & Lot",
-                  "features": [
-                  { "Status": "For Sale" },
-                  { "Living Area": "10,976 Sq.Ft." }
-                  ]
-              }
-          ]
-  } : {};
+  window.s3dAdditionalServices = /localhost/.test(window.location.href)
+    ? {
+        26219: [
+          {
+            title: 'Interior',
+            features: [{ 'total bedrooms': '6' }, { 'full bathrooms': '7' }],
+          },
+          {
+            title: 'Area & Lot',
+            features: [{ Status: 'For Sale' }, { 'Living Area': '10,976 Sq.Ft.' }],
+          },
+        ],
+      }
+    : {};
 }

@@ -1,7 +1,7 @@
 {
   "currency_label": "$",
   "currency_label_m2": "$t(currency_label) per $t(area_unit)",
-  "area_unit": "Sq/Ft",
+  "area_unit": "m²",
   "unit_statuses": {
     "0": "Sold",
     "1": "Available",
@@ -46,7 +46,7 @@
     }
   },
   "title": {
-    "genplan": "Eden",
+    "genplan": "Nexpo",
     "flyby_1_outside": "Build 1",
     "favourites": "Favourites",
     "plannings": "Plannings"
@@ -84,7 +84,7 @@
   "ctr": {
     "nav": {
       "title": "Menu 3D",
-      "genplan": "Eden",
+      "genplan": "Nexpo",
       "navigation": "Navigation",
       "tooltip_1": "Build 5",
       "tooltip_2": "Build 7",
@@ -92,7 +92,7 @@
       "flyby_1_outside": "Build 1",
       "flyby_1_inside": "Build 5",
       "flyby_2_inside": "Build 7",
-      "plannings": "Plannings",
+      "plannings": "Residence layouts",
       "floor": "Floor plan",
       "floor_plans": "Floor plans",
       "flat": "Residence",
@@ -103,7 +103,7 @@
       "menu": "Menu",
       "callback": "Inquire for Pricing",
       "intro": "Intro",
-      "plannings_availability": "Availability",
+      "plannings_availability": "Residence layouts",
       "home": "Home",
       "masterplan": "Building Overview"
     },
@@ -128,7 +128,7 @@
         "chooseOfFloor": "Floor",
         "repeatHelp": "?"
       },
-      "hightlightInfrastructure": "Overlay",
+      "hightlightInfrastructure": "Availability",
       "build_progress": "Construction progress",
       "on_the_map": "Location on the map",
       "on_the_build": "Residences layouts",
@@ -158,14 +158,13 @@
     "list": {
       "type": "Type",
       "rooms": "Bedrooms",
-      "baths": "Bathrooms",
+      "parking_spots": "Bathrooms",
       "area": "Area",
       "area_unit": "$t(area_unit)",
       "price": "Price",
       "status": "Status",
       "floor": "Floor",
-      "favourite--add": "Select",
-      "parking_spots": "Parking spots"
+      "favourite--add": "Select"
     },
     "range": {
       "floor": "Floor",
@@ -176,8 +175,8 @@
       "price_unit": "$t(currency_label)"
     },
     "checkboxes": {
-      "rooms": "Bedrooms",
-      "baths": "Bathrooms",
+      "rooms": "Rooms",
+      "parking_spots": "Bathrooms",
       "build": "Build",
       "type": "Type"
     },
@@ -212,6 +211,7 @@
     "pools": "pools",
     "from_window_view": "360 views",
     "scroll": "Scroll",
+    "see_all_photos": "See all {{count}} photos",
     "explication_data": {
       "floor_1": "Ground floor",
       "floor_2": "1st floor",
@@ -247,13 +247,15 @@
     "information": {
       "title": "Information",
       "sale": "Status",
-      "build": "House",
+      "build": "Build",
       "number": "Number",
       "area": "Area",
       "allArea": "Total area",
       "life_area": "Living area",
       "area_unit": "$t(area_unit)",
-      "rooms": "Bedrooms",
+      "rooms": "Rooms",
+      "beds": "Beds",
+      "beths": "Beths",
       "rooms_R": "R",
       "floor": "Floor",
       "price": "Price",
@@ -299,6 +301,10 @@
       "exteriorContactButton": "Contact the manager"
     },
     "contactUs": {
+      "form_title": "LET'S TALK",
+      "form_description": "Discover all details at our sales office",
+      "contacts_title": "GET IN TOUCH",
+      "contacts_description": "Stay connected — choose your way",
       "general_title": "CONTACTS",
       "phone": "Contact phone:",
       "email": "Our email:",
@@ -324,7 +330,17 @@
         "4": "Interior Design Consultation",
         "5": "Rental Potential"
       },
-      "contactButton": "CONTACT US TODAY"
+      "contactButton": "CONTACT US TODAY",
+      "form": {
+        "name": "Your name",
+        "phone": "Your phone",
+        "email": "Your email",
+        "name_placeholder": "Type your name",
+        "email_placeholder": "Type your email"
+      },
+      "working_hours": {
+        "title": "WORKING HOURS"
+      }
     },
     "virtual_tour_open": "Explore tour",
     "virtual_tour_close": "Pause"

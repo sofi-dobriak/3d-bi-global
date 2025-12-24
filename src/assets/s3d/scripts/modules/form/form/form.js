@@ -30,7 +30,8 @@ const lang = langDetect();
           field_only_letter: 'Ім`я повинно містити тільки букви',
           field_more_letter: 'Ім`я повинно містити не більше 30 букв',
           title: 'ЧИ ВИ ВЖЕ ЗНАЙШЛИ СВІЙ МАЙБУТНІЙ ДІМ?',
-          subtitle: 'Заповніть форму, щоб отримати більше інформації про нерухомість та умови придбання.',
+          subtitle:
+            'Заповніть форму, щоб отримати більше інформації про нерухомість та умови придбання.',
           only_number: 'Тут лише цифри',
           'Your phone': 'Ваш телефон:',
           'Your name': "Ваше ім'я:",
@@ -63,7 +64,8 @@ const lang = langDetect();
           send: 'Send message',
           sending: 'Sending',
           title: 'ARE YOU LOOKING TO GET MORE INFORMATION?',
-          subtitle: 'Fill out the form to get more information about the property and purchase details.',
+          subtitle:
+            'Fill out the form to get more information about the property and purchase details.',
           'Your name': 'Your name:',
           'Your phone': 'Your phone:',
           'Your email': 'Your email:',
@@ -98,7 +100,8 @@ const lang = langDetect();
           send: 'Send message',
           sending: 'Sending',
           title: 'ARE YOU LOOKING TO GET MORE INFORMATION?',
-          subtitle: 'Fill out the form to get more information about the property and purchase details.',
+          subtitle:
+            'Fill out the form to get more information about the property and purchase details.',
           'Your name': 'Your name:',
           'Your phone': 'Your phone:',
           'Your email': 'Your email:',
@@ -133,7 +136,8 @@ const lang = langDetect();
           send: 'Send message',
           sending: 'Sending',
           title: 'ARE YOU LOOKING TO GET MORE INFORMATION?',
-          subtitle: 'Fill out the form to get more information about the property and purchase details.',
+          subtitle:
+            'Fill out the form to get more information about the property and purchase details.',
           'Your name': 'Your name:',
           'Your phone': 'Your phone:',
           'Your email': 'Your email:',
@@ -168,7 +172,8 @@ const lang = langDetect();
           send: 'Send message',
           sending: 'Sending',
           title: 'ARE YOU LOOKING TO GET MORE INFORMATION?',
-          subtitle: 'Fill out the form to get more information about the property and purchase details.',
+          subtitle:
+            'Fill out the form to get more information about the property and purchase details.',
           'Your name': 'Your name:',
           'Your phone': 'Your phone:',
           'Your email': 'Your email:',
@@ -193,7 +198,82 @@ const lang = langDetect();
           connectionFailed: 'Server connection error',
         },
       },
-      
+      ru: {
+        translation: {
+          name: 'Имя:*',
+          phone: 'Телефон:*',
+          email: 'Email:*',
+          namePlaceholder: 'Имя',
+          emailPlaceholder: 'Email',
+          send: 'Отправить сообщение',
+          sending: 'Отправка',
+          title: 'ХОТИТЕ ПОЛУЧИТЬ БОЛЬШЕ ИНФОРМАЦИИ?',
+          subtitle:
+            'Заполните форму, чтобы получить подробную информацию об объекте и деталях покупки.',
+          'Your name': 'Ваше имя:',
+          'Your phone': 'Ваш телефон:',
+          'Your email': 'Ваш email:',
+          'Your comment': 'Ваш комментарий:',
+          'Type your message': 'Введите ваше сообщение',
+          field_too_short: 'Телефон должен содержать минимум {{cnt}} символов',
+          field_too_long: 'Телефон должен содержать максимум {{cnt}} символов',
+          field_only_letter: 'Имя должно содержать только буквы',
+          field_more_letter: 'Имя должно содержать не более 30 букв',
+          only_number: 'Только цифры',
+          required: 'Это поле обязательно для заполнения',
+          sendingSuccessTitle: 'Спасибо за вашу заявку!',
+          sendingSuccessText: 'Ожидайте ответа наших менеджеров',
+          sendingErrorText: 'Ожидайте ответа наших менеджеров',
+          sendingErrorTitle: 'Произошла ошибка',
+          send_fail:
+            'Сообщение не было отправлено из-за неизвестной ошибки сервера. Код: [send_fail]',
+          invalid_form:
+            'Сообщение не было отправлено из-за неизвестной ошибки сервера. Код: [invalid_form]',
+          front_error:
+            'Сообщение не было отправлено из-за неизвестной ошибки сервера. Код: [front_error]',
+          invalid_upload_file: 'Ошибка при загрузке файла. Код: [invalid_upload_file]',
+          invalid_recaptcha:
+            'Пожалуйста, заполните капчу и попробуйте снова. Код: [invalid_recaptcha]',
+          connectionFailed: 'Ошибка соединения с сервером',
+        },
+      },
+      kk: {
+        translation: {
+          name: 'Аты-жөні:*',
+          phone: 'Телефон:*',
+          email: 'Email:*',
+          namePlaceholder: 'Аты-жөні',
+          emailPlaceholder: 'Email',
+          send: 'Хабарлама жіберу',
+          sending: 'Жіберілуде',
+          title: 'ТОЛЫҒЫРАҚ АҚПАРАТ АЛҒЫҢЫЗ КЕЛЕ МЕ?',
+          subtitle:
+            'Нысан және сатып алу шарттары туралы толық ақпарат алу үшін нысанды толтырыңыз.',
+          'Your name': 'Сіздің атыңыз:',
+          'Your phone': 'Сіздің телефоныңыз:',
+          'Your email': 'Сіздің email поштаңыз:',
+          'Your comment': 'Сіздің пікіріңіз:',
+          'Type your message': 'Хабарламаңызды жазыңыз',
+          field_too_short: 'Телефон нөмірі кемінде {{cnt}} таңбадан тұруы керек',
+          field_too_long: 'Телефон нөмірі ең көп дегенде {{cnt}} таңбадан аспауы керек',
+          field_only_letter: 'Аты-жөні тек әріптерден тұруы керек',
+          field_more_letter: 'Аты-жөні 30 әріптен аспауы керек',
+          only_number: 'Тек сандарды енгізіңіз',
+          required: 'Бұл өрісті толтыру міндетті',
+          sendingSuccessTitle: 'Өтінішіңіз үшін рақмет!',
+          sendingSuccessText: 'Біздің менеджерлердің жауабын күтіңіз',
+          sendingErrorText: 'Біздің менеджерлердің жауабын күтіңіз',
+          sendingErrorTitle: 'Қате орын алды',
+          send_fail: 'Белгісіз сервер қатесіне байланысты хабарлама жіберілмеді. Коды: [send_fail]',
+          invalid_form:
+            'Белгісіз сервер қатесіне байланысты хабарлама жіберілмеді. Коды: [invalid_form]',
+          front_error:
+            'Белгісіз сервер қатесіне байланысты хабарлама жіберілмеді. Коды: [front_error]',
+          invalid_upload_file: 'Файлды жүктеу қатесі. Коды: [invalid_upload_file]',
+          invalid_recaptcha: 'Капчаны толтырып, әрекетті қайталаңыз. Коды: [invalid_recaptcha]',
+          connectionFailed: 'Сервермен байланыс орнату қатесі',
+        },
+      },
     },
   });
 })();
@@ -317,8 +397,6 @@ export default class FormMonster {
     this.listers();
   }
 }
-
-
 
 async function wait(time) {
   return new Promise(resolve => {

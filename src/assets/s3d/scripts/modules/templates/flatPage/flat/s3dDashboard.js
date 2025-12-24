@@ -1,15 +1,31 @@
-import get from "lodash/get"
-import { FLAT_GALLERY_FANCYBOX, TOOLTIP_ATTRIBUTE } from "../../../../../../s3d2/scripts/constants"
-import ButtonIconLeft from "../../../../../../s3d2/scripts/templates/common/ButtonIconLeft"
-import s3d2spriteIcon from "../../../../../../s3d2/scripts/templates/spriteIcon"
-import { numberWithCommas } from "../../../../../../s3d2/scripts/helpers/helpers_s3d2"
+import get from 'lodash/get';
+import { FLAT_GALLERY_FANCYBOX, TOOLTIP_ATTRIBUTE } from '../../../../../../s3d2/scripts/constants';
+import ButtonIconLeft from '../../../../../../s3d2/scripts/templates/common/ButtonIconLeft';
+import s3d2spriteIcon from '../../../../../../s3d2/scripts/templates/spriteIcon';
+import { numberWithCommas } from '../../../../../../s3d2/scripts/helpers/helpers_s3d2';
+import i18next from 'i18next';
 
-export default function s3dDashboard(i18n, flat, $specifiedFlybysByGroup = '', showPrices) {
+export default function s3dDashboard(
+  i18n,
+  flat,
+  $specifiedFlybysByGroup = '',
+  showPrices,
+  contacts,
+) {
+  const lang = i18n.language;
 
-    const gallery = get(flat, 'gallery', [])
-    return `
+  const gallery = get(flat, 'gallery', []);
+  const address = get(
+    contacts,
+    ['construction_department', 'text', lang],
+    contacts.construction_department.text.en,
+  );
+
+  return `
         <div class="s3d-flat-dashboard">
-            <div data-gallery-length="${gallery.length}" class="s3d-flat-dashboard__gallery ${gallery.length >= 5 ? '' : 's3d-flat-dashboard__gallery--less-items'}" ${gallery.length == 0 || !gallery.length ? ' style="display: none;" ' : ''}>
+            <div data-gallery-length="${gallery.length}" class="s3d-flat-dashboard__gallery ${
+    gallery.length >= 5 ? '' : 's3d-flat-dashboard__gallery--less-items'
+  }" ${gallery.length == 0 || !gallery.length ? ' style="display: none;" ' : ''}>
                 <div class="s3d-flat-dashboard__gallery-item-wrap">
                     <div class="s3d-flat-dashboard__gallery-item" ${FLAT_GALLERY_FANCYBOX}="0">
                         <img src="${gallery[0]}" alt="flat image" loading="lazy"/>
@@ -32,52 +48,90 @@ export default function s3dDashboard(i18n, flat, $specifiedFlybysByGroup = '', s
                 </div>
                 <div class="s3d-flat-dashboard__gallery-item-wrap">
                     <div class="s3d-flat-dashboard__gallery-item" ${FLAT_GALLERY_FANCYBOX}="4">
-                        <img src="${gallery[4]}" onerror="this.closest('.s3d-flat-dashboard__gallery-item-wrap').remove()" alt="flat image" loading="lazy"/>
+                        <img src="${
+                          gallery[4]
+                        }" onerror="this.closest('.s3d-flat-dashboard__gallery-item-wrap').remove()" alt="flat image" loading="lazy"/>
                     </div>
                 </div>
-                <div class="s3d-flat-dashboard__status-label" ${flat.sale == 1 ? `${TOOLTIP_ATTRIBUTE}="${i18n.t('unit_statuses.1_tooltip')}"` : ''}>
+                <div class="s3d-flat-dashboard__status-label" ${
+                  flat.sale == 1
+                    ? `${TOOLTIP_ATTRIBUTE}="${i18n.t('unit_statuses.1_tooltip')}"`
+                    : ''
+                }>
                     <span>${i18n.t(`sales.${flat.sale}`)}</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15C11.866 15 15 11.866 15 8C15 4.13404 11.866 1 8 1C4.13404 1 1 4.13404 1 8C1 11.866 4.13404 15 8 15ZM9.18356 11.7733L9.2942 11.2933L9.29417 11.2933C9.23716 11.3218 9.1449 11.3547 9.01758 11.3919C8.89016 11.4292 8.77617 11.4479 8.67562 11.4479C8.46108 11.4479 8.31015 11.4106 8.22303 11.3359C8.13581 11.2613 8.09225 11.1208 8.09225 10.9146C8.09225 10.8328 8.10568 10.7119 8.13255 10.552C8.15932 10.3919 8.18954 10.2497 8.22303 10.1253L8.63534 8.57322C8.67564 8.43105 8.70329 8.27465 8.71831 8.10388C8.73342 7.93323 8.74103 7.81412 8.74103 7.74665C8.74103 7.41948 8.63287 7.15371 8.41664 6.94932C8.20041 6.74481 7.89282 6.64256 7.49387 6.64256C7.2726 6.64256 7.0379 6.68436 6.78987 6.76796C6.54175 6.85144 6.28195 6.95191 6.01042 7.06925L5.89979 7.54926C5.98021 7.5172 6.07661 7.48347 6.18892 7.44795C6.30123 7.41233 6.41107 7.39463 6.51834 7.39463C6.73624 7.39463 6.88372 7.4337 6.96086 7.51196C7.03791 7.59011 7.07653 7.72883 7.07653 7.92787C7.07653 8.03819 7.06389 8.15992 7.0388 8.29329C7.01361 8.42655 6.98259 8.56799 6.94575 8.71727L6.53334 10.2746C6.4965 10.4382 6.46973 10.5849 6.45294 10.7146C6.43614 10.8444 6.42775 10.9715 6.42775 11.0959C6.42775 11.4159 6.53928 11.6799 6.76222 11.8879C6.98515 12.096 7.2978 12.2 7.70002 12.2C7.96159 12.2 8.19114 12.1635 8.38899 12.0906C8.58674 12.0177 8.85167 11.912 9.18356 11.7733ZM9.11056 5.47201C9.30338 5.28175 9.39979 5.05148 9.39979 4.78131C9.39979 4.5111 9.30337 4.28001 9.11056 4.08798C8.91784 3.89595 8.68571 3.79999 8.41407 3.79999C8.14251 3.79999 7.9096 3.89594 7.71511 4.08798C7.52072 4.28003 7.42342 4.51113 7.42342 4.78131C7.42342 5.05148 7.52072 5.28176 7.71511 5.47201C7.90962 5.66226 8.14254 5.75728 8.41407 5.75728C8.68571 5.75728 8.91784 5.66226 9.11056 5.47201Z" fill="#FAFBFE"/>
                     </svg>
                 </div>
-                ${ButtonIconLeft('s3d-flat-dashboard__gallery-button', `${FLAT_GALLERY_FANCYBOX}="${gallery.length >= 5 ? 5 : 0}"`, `See all ${gallery.length} photos`, 'Card')}
+                ${ButtonIconLeft(
+                  's3d-flat-dashboard__gallery-button',
+                  `${FLAT_GALLERY_FANCYBOX}="${gallery.length >= 5 ? 5 : 0}"`,
+                  i18n.t('Flat.see_all_photos', { count: gallery.length }),
+                  'Card',
+                )}
             </div>
             <div class="s3d-flat-dashboard__info">
                 <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-column s3d-flat-dashboard__info-item--mobile-head">
                     <div class="text-style-3-d-fonts-1920-h-1">
-                        Residence ${flat.number} 
+                        ${i18n.t('ctr.nav.flat')} ${flat.number}
                     </div>
                     <div class="text-gray-800">
-                        ${flat.adress || ''} 
+                      <!--  ${flat.adress || ''} -->
+                      ${address || ''}
                     </div>
                 </div>
-                ${showPrices ? `<div class="s3d-flat-dashboard__info-item">
+                ${
+                  showPrices
+                    ? `<div class="s3d-flat-dashboard__info-item">
                     <div class="text-style-3-d-fonts-1920-h-1">
-                        ${numberWithCommas(flat.price)} 
+                        ${numberWithCommas(flat.price)}
                     </div>
                     <div class="text-gray-800">
                         $
                     </div>
-                </div>` : ''}
-                <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
+                </div>`
+                    : ''
+                }
+              <!--  <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
                     <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="s3d-flat-dashboard__info-item__icon"><path stroke="none" d="M2 27a1 1 0 002 0v-4h24v4a1 1 0 002 0v-9a2 2 0 00-2-2H4a2 2 0 00-2 2zM14.5 7H6V5a1 1 0 00-2 0v8.5a.5.5 0 00.5.5h10a.5.5 0 00.5-.5v-6a.5.5 0 00-.5-.5zM27 4a1 1 0 00-1 1v2h-8.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h10a.5.5 0 00.5-.5V5a1 1 0 00-1-1z"></path></svg>
                     <div class="text-style-3-d-fonts-1920-h-1">
                         ${flat.rooms}
                     </div>
                     <div class="text-gray-800">
-                        Beds
+                        ${i18n.t('Flat.information.beds')}
                     </div>
-                </div>
+                </div> -->
+                ${
+                  flat.parking_spots == 0 ||
+                  flat.parking_spots == null ||
+                  flat.parking_spots == undefined
+                    ? ``
+                    : `<div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
+                        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="s3d-flat-dashboard__info-item__icon"><g stroke="none"><path d="M5 17a2 2 0 00-2 2v3.76A5.26 5.26 0 008 28v1a1 1 0 002 0v-1h12v1a1 1 0 002 0v-1a5.26 5.26 0 005-5.22V19a2 2 0 00-2-2z"></path><path d="M19.05 2a4.47 4.47 0 00-5 4.09 4 4 0 00-3 3.29.51.51 0 00.5.59h6.92a.51.51 0 00.5-.59 4 4 0 00-2.88-3.24A2.41 2.41 0 0118.45 4 2.61 2.61 0 0121 6.63V17h2V6.69A4.64 4.64 0 0019.05 2z"></path></g></svg>
+                        <div class="text-style-3-d-fonts-1920-h-1">
+                            ${flat.parking_spots}
+                        </div>
+                        <div class="text-gray-800">
+                            ${i18n.t('Flat.information.beths')}
+                        </div>
+                    </div>`
+                }
+
                 <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
-                    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="s3d-flat-dashboard__info-item__icon"><g stroke="none"><path d="M5 17a2 2 0 00-2 2v3.76A5.26 5.26 0 008 28v1a1 1 0 002 0v-1h12v1a1 1 0 002 0v-1a5.26 5.26 0 005-5.22V19a2 2 0 00-2-2z"></path><path d="M19.05 2a4.47 4.47 0 00-5 4.09 4 4 0 00-3 3.29.51.51 0 00.5.59h6.92a.51.51 0 00.5-.59 4 4 0 00-2.88-3.24A2.41 2.41 0 0118.45 4 2.61 2.61 0 0121 6.63V17h2V6.69A4.64 4.64 0 0019.05 2z"></path></g></svg>
-                    <div class="text-style-3-d-fonts-1920-h-1">
-                        ${flat.parking_spots}
-                    </div>
-                    <div class="text-gray-800">
-                        Baths
-                    </div>
+                  <div class="text-style-3-d-fonts-1920-h-1">${flat.build}</div>
+                  <div class="text-gray-800">${i18n.t('Flat.information.build')}</div>
                 </div>
+
+                <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
+                  <div class="text-style-3-d-fonts-1920-h-1">${flat.floor}</div>
+                  <div class="text-gray-800">${i18n.t('Flat.information.floor')}</div>
+                </div>
+
+                <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
+                  <div class="text-style-3-d-fonts-1920-h-1">${flat._rooms}</div>
+                  <div class="text-gray-800">${i18n.t('Flat.information.rooms')}</div>
+                </div>
+
                 <div class="s3d-flat-dashboard__info-item s3d-flat-dashboard__info-item--mobile-row">
                     <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" role="img" class="s3d-flat-dashboard__info-item__icon"><path stroke="none" d="M29.39,25.56l-24-22A1.9767,1.9767,0,0,0,4.01,3H4A2.0048,2.0048,0,0,0,2,5V28a1.0029,1.0029,0,0,0,1,1H28a1.9917,1.9917,0,0,0,2-2A1.9163,1.9163,0,0,0,29.39,25.56ZM8,26.5a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5V25a1,1,0,0,1,2,0Zm5,0a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5V25a1,1,0,0,1,2,0ZM10,21V16l5,5Zm8,5.5a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5V25a1,1,0,0,1,2,0Zm5,0a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5V25a1,1,0,0,1,2,0Z"></path></svg>
                     <div class="text-style-3-d-fonts-1920-h-1">
@@ -101,14 +155,20 @@ export default function s3dDashboard(i18n, flat, $specifiedFlybysByGroup = '', s
                     </svg>
                     <span>${i18n.t('Flat.buttons.pdf')}</span>
                 </button>
-                <button class="ButtonIconLeft js-s3d-add__favourite text-uppercase-important" data-id="${flat.id}">
+                <button class="ButtonIconLeft js-s3d-add__favourite text-uppercase-important" data-id="${
+                  flat.id
+                }">
                     <input type="checkbox" data-key="checked"/>
                     ${s3d2spriteIcon('Compare')}
-                    <span title="Added to compare" data-in-fav="">Added to compare</span>
-                    <span title="Compare" data-not-in-fav="">Compare</span>
+                    <span title="Added to compare" data-in-fav="">${i18n.t(
+                      'Flat.buttons.addedToCompare',
+                    )}</span>
+                    <span title="Compare" data-not-in-fav="">${i18n.t(
+                      'Flat.buttons.compare',
+                    )}</span>
                 </button>
                 ${$specifiedFlybysByGroup}
             </div>
         </div>
-    `
+    `;
 }

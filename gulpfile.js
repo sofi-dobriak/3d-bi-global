@@ -193,10 +193,10 @@ function styles_v2() {
         notify.onError({
           title: 'SCSS',
           message: '<%= error.message %>',
-        })
-      )
+        }),
+      ),
     )
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write(''))
     .pipe(rename('s3d2.min.css'))
     .pipe(gulp.dest(paths.styles_v2.dest));
 }

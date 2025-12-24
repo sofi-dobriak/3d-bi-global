@@ -7,11 +7,11 @@
     padding: var(--space-40) 0 0 0;
     width: 100%;
     @media screen and (max-width: 1920px) {
-      padding: var(--space-32) 0 0 0;
+      padding: var(--space-2) 0 0 0;
       gap: var(--space-12);
     }
     @media screen and (max-width: 768px) {
-      padding: var(--space-20) 0 0 0;
+      // padding: var(--space-20) 0 0 0;
       gap: var(--space-10);
     }
 

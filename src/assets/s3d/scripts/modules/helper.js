@@ -33,7 +33,7 @@ class HelperGif {
     });
 
     const openHelper = $('.js-s3d-ctr__helper');
-    if (size(openHelper) > 0) {
+    if (openHelper && size(openHelper) > 0) {
       openHelper.on('click', () => {
         this.currentWindow = 0;
         console.log('show me FAQ');
@@ -47,6 +47,7 @@ class HelperGif {
         // }, 300);
       });
     }
+
     if (window.localStorage.getItem('info')) return;
     this.updateContent(0, () => {
       // this.triggerGif(this.currentWindow);
@@ -174,6 +175,9 @@ class HelperGif {
         },
       });
     }
+
+    const isDesktop = document.documentElement.classList.contains('desktop');
+    if (!isDesktop) steps.length = 5;
 
     const driverObj = driver({
       showProgress: true,
