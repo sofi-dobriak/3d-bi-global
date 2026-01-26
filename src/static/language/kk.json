@@ -19,6 +19,16 @@
     "build": "Ғимарат {{build}}",
     "section": "Секция {{section}}"
   },
+  "asideMenu": {
+    "home": "Басты бет",
+    "building_overview": "Ғимаратқа шолу",
+    "availability": "Тұрғын үй-жайлардың орналасуы",
+    "tours": "Турлар",
+    "video": "Видео",
+    "brochure": "Брошюра",
+    "location": "Орналасқан жері",
+    "contact": "Контактілер"
+  },
   "infoBox": {
     "sold": "Барлық тұрғын үйлер сатылды",
     "sold_short": "Сатылды",

@@ -17,7 +17,7 @@
   transform: translateX(-100%);
   // opacity: 0;
   transition: opacity 0.25s ease-out;
-  transition: transform 0.3s linear, opacity 0.2s linear;
+  transition: transform 0.3s linear, opacity 0.2s linear, visibility 0s linear 0.2s;
   overflow-y: scroll;
   overflow-x: hidden;
   @include mixins.scrollbar-h;
@@ -46,8 +46,9 @@
 
   &.s3d-open-filter {
     transform: translateX(0);
-    transition: transform 0.3s linear, opacity 0.2s linear;
+    transition: transform 0.3s linear, opacity 0.2s linear, visibility 0s linear 0s;
     opacity: 1;
+    visibility: visible;
   }
 
   &:not(.s3d-show) {

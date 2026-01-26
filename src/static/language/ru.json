@@ -19,6 +19,16 @@
     "build": "Корпус {{build}}",
     "section": "Секция {{section}}"
   },
+  "asideMenu": {
+    "home": "Главная",
+    "building_overview": "Обзор здания",
+    "availability": "Планировка жилых помещений",
+    "tours": "Туры",
+    "video": "Видео",
+    "brochure": "Брошюра",
+    "location": "Расположение",
+    "contact": "Контакты"
+  },
   "infoBox": {
     "sold": "Все резиденции проданы",
     "sold_short": "Продано",

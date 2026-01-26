@@ -19,7 +19,7 @@ export default function IconButton(className, attributes, iconName, type = 'a') 
   }
 
   return `
-    <button class="IconButton ${className}" ${attributes}>
+    <button class="IconButton IconButton--dark ${className}" ${attributes}>
       ${s3d2spriteIcon(iconName, 'IconButton__icon')}
     </button>
   `;

@@ -24,6 +24,14 @@
       fill: var(--icon-gray-200);
     }
   }
+  &--dark {
+    border-radius: var(--Spacing-Corner-radius-radius-2, 8px);
+    background: var(--colors-surface-gray-surface-gray-900-transparent-60, rgba(26, 30, 33, 0.6));
+    backdrop-filter: blur(20px);
+    border-color: transparent;
+    color: var(--text-gray-200);
+  }
+
   &.active {
     background-color: var(--color-brand-800);
     border-color: var(--border-brand-900);

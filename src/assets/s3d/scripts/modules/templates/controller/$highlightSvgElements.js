@@ -8,9 +8,9 @@ export function $highlightSvgElements(
   wrapperDataAttr = '',
 ) {
   return `
-      <label for="${dataAttr}" class="s3d-ctr__menu-3d-btn-style " ${hideElementsAttribute([
-    '',
-  ])} ${wrapperDataAttr}>
+      <label for="${dataAttr}" class="s3d-ctr__menu-3d-btn-style s3d-ctr__menu-3d-btn-style--dark" ${hideElementsAttribute(
+    [''],
+  )} ${wrapperDataAttr}>
         <span class="s3d-ctr__filter__text">${
           text ? text : i18n.t('ctr.menu.hightlightInfrastructure')
         }</span>

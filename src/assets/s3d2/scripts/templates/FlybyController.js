@@ -14,7 +14,7 @@ import { showOn } from '../helpers/helpers_s3d2';
 
 const $dayNightSwitcher = i18n => {
   return `
-  <div class="js-ctr-btn s3d-ctr__theme js-s3d-ctr__theme s3d-ctr__menu-3d-btn-style">
+  <div class="js-ctr-btn s3d-ctr__theme js-s3d-ctr__theme s3d-ctr__menu-3d-btn-style s3d-ctr__menu-3d-btn-style--dark">
     <input type="checkbox" class="s3d-ctr__switch" id="switch">
     <label for="switch">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ const $dayNightSwitcher = i18n => {
 
 export const $flatFloorChooser = i18n => {
   return `
-    <div class="js-ctr-btn s3d__choose--flat js-s3d__choose--flat s3d-ctr__menu-3d-btn-style">
+    <div class="js-ctr-btn s3d__choose--flat s3d__choose--flat--dark js-s3d__choose--flat s3d-ctr__menu-3d-btn-style">
       <div class="s3d__choose--flat--button-bg js-s3d__choose--flat--button-svg">
           <svg viewBox="0 0 145 44" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0 22C0 9.84974 9.84973 0 22 0H123C135.15 0 145 9.84974 145 22C145 34.1503 135.15 44 123 44H22C9.84974 44 0 34.1503 0 22Z"/>

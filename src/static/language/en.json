@@ -19,6 +19,16 @@
     "build": "Build {{build}}",
     "section": "Section {{section}}"
   },
+  "asideMenu": {
+    "home": "Home",
+    "building_overview": "Building Overview",
+    "availability": "Layout of residential premises",
+    "tours": "Tours",
+    "video": "Video",
+    "brochure": "Brochure",
+    "location": "Location",
+    "contact": "Contact"
+  },
   "infoBox": {
     "sold": "All residences are sold",
     "sold_short": "Sold",

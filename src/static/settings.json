@@ -2,17 +2,17 @@
   "intro": {
     "id": "intro",
     "generalWrapId": ".js-s3d__slideModule",
-    "title_img": "/wp-content/themes/3d/assets/s3d/images/mansion-big-logo.png",
+    "title_img": "/wp-content/themes/3d/assets/s3d/images/logo_nexpo_global_light.svg",
     "bg_url": "https://3d-mension-on-fisher.smartorange.site/wp-content/themes/3d/assets/images-wp/poster.jpg",
-    "video_url": "https://3d-mension-on-fisher.smartorange.site/wp-content/themes/3d/assets/images-wp/real-estate-v5-v2.mp4",
+    "video_url": "/wp-content/themes/3d/assets/s3d/images/nexpro-intro-video.mp4",
     "faq": "Видалити цей об'єкт, якщо не потрібен інтро екран перед обльотом"
   },
   "genplan": {
     "id": "genplan",
     "generalWrapId": "#js-s3d__wrapper",
-    "imageUrl": "images/flyby/masterplan_update/",
-    "sd_imageUrl": "images/flyby/masterplan_update/",
-    "imageUrlDark": "images/flyby/masterplan_update/",
+    "imageUrl": "images/flyby/genplan/",
+    "sd_imageUrl": "images/flyby/genplan/",
+    "imageUrlDark": "images/flyby/genplan/",
     "enableParalax": false,
     "enableClouds": false,
     "image_format": "jpg",
@@ -23,7 +23,7 @@
     "SLIDER_MOBILE_FINGER_SWIPE": false,
     "numberSlide": {
       "min": 0,
-      "max": 119
+      "max": 199
     },
     "verticalAlig_faq": "top || center || bottom",
     "verticalAlign": "center",
@@ -32,11 +32,10 @@
     "video_keyframes": {},
     "controlPoint": [
       1,
-      24,
-      48,
-      65,
-      72,
-      96
+      40,
+      80,
+      120,
+      160
     ],
     "activeSlide": 1,
     "rotateSpeedDefault": 24,
@@ -56,9 +55,9 @@
       "outside": {
         "id": "flyby_1_outside",
         "generalWrapId": "#js-s3d__wrapper",
-        "imageUrl": "images/flyby/masterplan_update/",
-        "sd_imageUrl": "images/flyby/masterplan_update/",
-        "imageUrlDark": "images/flyby/masterplan_update/",
+        "imageUrl": "images/flyby/1/outside/",
+        "sd_imageUrl": "images/flyby/1/outside/",
+        "imageUrlDark": "images/flyby/1/outside/",
         "enableParalax": false,
         "enableClouds": false,
         "image_format": "jpg",
@@ -69,7 +68,7 @@
         "show_flat_polygons_tooltip_key": "area",
         "numberSlide": {
           "min": 0,
-          "max": 119
+          "max": 159
         },
         "verticalAlig_faq": "top || center || bottom",
         "verticalAlign": "center",
@@ -78,10 +77,9 @@
         "video_keyframes": {},
         "controlPoint": [
           1,
-          24,
-          48,
-          72,
-          96
+          40,
+          80,
+          120
         ],
         "activeSlide": 1,
         "rotateSpeedDefault": 24,
@@ -95,22 +93,26 @@
         "frameWithNorthDirection": 100,
         "mouseSpeed": 0.5,
         "startDegCompass": 60
-      },
-      "inside": {
-        "id": "flyby_1_inside",
+      }
+    },
+    "2": {
+      "outside": {
+        "id": "flyby_2_outside",
         "generalWrapId": "#js-s3d__wrapper",
-        "imageUrl": "images/flyby/flyby/1/",
-        "sd_imageUrl": "images/flyby/flyby/1/",
-        "imageUrlDark": "images/flyby/flyby/1/",
+        "imageUrl": "images/flyby/2/outside/",
+        "sd_imageUrl": "images/flyby/2/outside/",
+        "imageUrlDark": "images/flyby/2/outside/",
         "enableParalax": false,
         "enableClouds": false,
         "image_format": "jpg",
         "defaultTheme": "light",
         "class": "js-s3d__wrapper",
         "SLIDER_MOBILE_FINGER_SWIPE": false,
+        "show_flat_polygons_tooltip": true,
+        "show_flat_polygons_tooltip_key": "area",
         "numberSlide": {
           "min": 0,
-          "max": 120
+          "max": 159
         },
         "verticalAlig_faq": "top || center || bottom",
         "verticalAlign": "center",
@@ -119,12 +121,56 @@
         "video_keyframes": {},
         "controlPoint": [
           1,
-          30,
-          60,
-          90
+          40,
+          80,
+          120
         ],
         "activeSlide": 1,
-        "rotateSpeedDefault": 30,
+        "rotateSpeedDefault": 24,
+        "rotateSpeed": [
+          {
+            "min": 79,
+            "max": 100,
+            "ms": 40
+          }
+        ],
+        "frameWithNorthDirection": 100,
+        "mouseSpeed": 0.5,
+        "startDegCompass": 60
+      }
+    },
+    "3": {
+      "outside": {
+        "id": "flyby_3_outside",
+        "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/3/outside/",
+        "sd_imageUrl": "images/flyby/3/outside/",
+        "imageUrlDark": "images/flyby/3/outside/",
+        "enableParalax": false,
+        "enableClouds": false,
+        "image_format": "jpg",
+        "defaultTheme": "light",
+        "class": "js-s3d__wrapper",
+        "SLIDER_MOBILE_FINGER_SWIPE": false,
+        "show_flat_polygons_tooltip": true,
+        "show_flat_polygons_tooltip_key": "area",
+        "numberSlide": {
+          "min": 0,
+          "max": 159
+        },
+        "verticalAlig_faq": "top || center || bottom",
+        "verticalAlign": "center",
+        "horizontalAlign_faq": "left || center || right",
+        "horizontalAlign": "center",
+        "video_keyframes": {},
+        "controlPoint": [
+          1,
+          40,
+          80,
+          120
+        ],
+        "activeSlide": 1,
+        "rotateSpeedDefault": 24,
         "rotateSpeed": [
           {
             "min": 79,
@@ -390,12 +436,12 @@
       "weekdays": {
         "en": "Monday - Friday: 09:00 - 20:00",
         "ru": "Понедельник - Пятница: 09:00 - 20:00",
-        "kk":"Дүйсенбі - Жұма: 09:00 - 20:00"
+        "kk": "Дүйсенбі - Жұма: 09:00 - 20:00"
       },
       "weekends": {
         "en": "Saturday - Sunday: Flexible schedule",
-        "ru":"Суббота - Воскресенье: гибкий график",
-        "kk":"Сенбі - Жексенбі: Икемді кесте"
+        "ru": "Суббота - Воскресенье: гибкий график",
+        "kk": "Сенбі - Жексенбі: Икемді кесте"
       }
     }
   },
