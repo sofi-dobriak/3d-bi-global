@@ -48,11 +48,18 @@ export default function MobileNavigationMenu(i18n, config) {
       </div>
       ${
         config.genplan
-          ? ButtonWithoutIcon('js-s3d-nav__btn', 'data-type="flyby" data-side="outside" data-flyby="1"', i18n.t(`ctr.nav.genplan`))
+          ? ButtonWithoutIcon(
+              'js-s3d-nav__btn',
+              'data-type="flyby" data-side="outside" data-flyby="1"',
+              i18n.t(`ctr.nav.genplan`),
+            )
           : ''
       }
-      
-      
+      ${MobileAccordion({
+        title: i18n.t(`ctr.nav.flyby`),
+        innerHTML: `${FlybysDropdown(i18n, config)}`,
+      })}
+
       ${ButtonWithoutIcon('js-s3d-nav__btn', 'data-type="floor"', i18n.t(`ctr.nav.floor`))}
       ${ButtonWithoutIcon('js-s3d-nav__btn', 'data-type="flat"', i18n.t(`ctr.nav.flat`))}
     </div>

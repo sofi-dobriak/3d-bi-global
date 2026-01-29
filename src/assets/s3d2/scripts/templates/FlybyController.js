@@ -80,7 +80,7 @@ export default function FlybyController(i18n) {
       </button>
       <div class="FlybyController">
         <div class="FlybyController__row">
-          ${$dayNightSwitcher(i18n)}
+          <!--${$dayNightSwitcher(i18n)}-->
           ${IconButton('js-ctr-btn js-s3d-ctr__helper', '', 'Tutorial')}
         </div>
         ${ButtonWithoutIcon(

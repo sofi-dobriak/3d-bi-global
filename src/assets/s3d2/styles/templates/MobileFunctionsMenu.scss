@@ -38,11 +38,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-200-trancperent-88);
+    // background-color: var(--color-200-trancperent-88);
+    background-color: rgba(26, 30, 33, 0.6);
     border-radius: var(--border-space-2);
 
+    [data-mobile-theme-switcher] {
+      background-color: transparent;
+    }
+
     .IconButton {
-      border: none
+      border: none;
     }
   }
 
@@ -66,7 +71,6 @@
     height: 40px;
 
     .ButtonWithoutIcon {
-
       text-align: center;
     }
   }
@@ -122,8 +126,6 @@
     margin-bottom: 0;
   }
 }
-
-
 
 .desktop {
   .MobileFunctionsMenu {

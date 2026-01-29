@@ -165,7 +165,6 @@ function styles() {
     .pipe(
       sass({
         outputStyle: 'expanded', // компиляции в CSS с отступами
-        silenceDeprecations: ['legacy-js-api', 'import'],
       }),
     )
     .on(
@@ -183,20 +182,20 @@ function styles() {
 function styles_v2() {
   return gulp
     .src(paths.styles_v2.main)
-    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init()) // инциализация sourcemap'ов
     .pipe(
       sass({
-        outputStyle: 'expanded',
-        silenceDeprecations: ['legacy-js-api', 'import'],
-      }).on(
-        'error',
-        notify.onError({
-          title: 'SCSS',
-          message: '<%= error.message %>',
-        }),
-      ),
+        outputStyle: 'expanded', // компиляции в CSS с отступами
+      }),
     )
-    .pipe(sourcemaps.write(''))
+    .on(
+      'error',
+      notify.onError({
+        title: 'SCSS',
+        message: '<%= error.message %>', // вывод сообщения об ошибке
+      }),
+    )
+    .pipe(sourcemaps.write())
     .pipe(rename('s3d2.min.css'))
     .pipe(gulp.dest(paths.styles_v2.dest));
 }

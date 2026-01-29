@@ -57,7 +57,10 @@
   },
   "title": {
     "genplan": "Nexpo",
-    "flyby_1_outside": "Build 1",
+    "flyby_1_outside": "Master plan",
+    "flyby_2_outside": "Build 1",
+    "flyby_3_outside": "Build 2",
+    "flyby_4_outside": "Build 3",
     "favourites": "Favourites",
     "plannings": "Plannings"
   },
@@ -99,7 +102,10 @@
       "tooltip_1": "Build 5",
       "tooltip_2": "Build 7",
       "flyby": "Build",
-      "flyby_1_outside": "Build 1",
+      "flyby_1_outside": "Master plan",
+      "flyby_2_outside": "Build 1",
+      "flyby_3_outside": "Build 2",
+      "flyby_4_outside": "Build 3",
       "flyby_1_inside": "Build 5",
       "flyby_2_inside": "Build 7",
       "plannings": "Residence layouts",

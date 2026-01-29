@@ -1457,12 +1457,16 @@ class AppModel extends EventEmitter {
         flag,
         changeClass: 's3d-display',
       }),
-    controllerChoose: flag =>
+    controllerChoose: flag => {
+      const isFirstFlyby = this.fsm.settings.flyby === '1' || this.fsm.settings.flyby === 1;
+      const shouldShow = flag && !isFirstFlyby;
+
       this.emit('changeClass', {
         target: '.js-s3d__choose--flat',
-        flag,
+        flag: shouldShow,
         changeClass: 's3d-display',
-      }),
+      });
+    },
     controllerThemeChoose: flag =>
       this.emit('changeClass', { target: '.js-s3d-ctr__theme', flag, changeClass: 's3d-display' }),
 

@@ -57,7 +57,10 @@
   },
   "title": {
     "genplan": "Некспо",
-    "flyby_1_outside": "Ғимарат 1",
+    "flyby_1_outside": "Бас жоспар",
+    "flyby_2_outside": "1-ші ғимарат",
+    "flyby_3_outside": "2-ші ғимарат",
+    "flyby_4_outside": "3-ші ғимарат",
     "favourites": "Таңдаулылар",
     "plannings": "Жоспарлар"
   },
@@ -99,7 +102,10 @@
       "tooltip_1": "Ғимарат 5",
       "tooltip_2": "Ғимарат 7",
       "flyby": "Ғимарат",
-      "flyby_1_outside": "Ғимарат 1",
+      "flyby_1_outside": "Бас жоспар",
+      "flyby_2_outside": "1-ші ғимарат",
+      "flyby_3_outside": "2-ші ғимарат",
+      "flyby_4_outside": "3-ші ғимарат",
       "flyby_1_inside": "Ғимарат 5",
       "flyby_2_inside": "Ғимарат 7",
       "plannings": "Тұрғын үйлердің орналасуы",

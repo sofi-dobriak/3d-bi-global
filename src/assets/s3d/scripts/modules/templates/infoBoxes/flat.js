@@ -25,7 +25,7 @@ function Flat(i18n, data) {
     id,
     show_prices,
     parking_spots,
-    img_small: srcImage,
+    img_big: srcImage,
   } = data;
   const img = srcImage ? srcImage : imageDefault;
   const currency = i18n.t(`currency_label`);
@@ -94,11 +94,14 @@ function Flat(i18n, data) {
         ${$priceBlock}
         <div class="s3d-infoBox__info">
           <div class="s3d-infoBox__flat__wrapper-label">
-            <div class="s3d-infoBox__flat__label">
-              ${rooms} Beds
+            <div class="s3d-card__info-label">
+              ${i18n.t('Flat.information.build')}: ${build}
             </div>
             <div class="s3d-card__info-label">
-              ${parking_spots} Baths
+              ${i18n.t('Flat.information.floor')}: ${floor}
+            </div>
+            <div class="s3d-card__info-label">
+              ${i18n.t('Flat.information.number')}: ${number}
             </div>
           </div>
           <!--<div class="s3d-infoBox__flat__block">

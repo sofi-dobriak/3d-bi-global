@@ -71,7 +71,13 @@ class IntroModel extends EventEmitter {
       window.dispatchEvent(new Event('intro-video-loaded'));
 
       setTimeout(() => {
-        this.updateFsm({ type: 'genplan', id: 'genplan', change: true });
+        this.updateFsm({
+          type: 'flyby',
+          flyby: '1',
+          side: 'outside',
+          id: 'flyby_1_outside',
+          change: true,
+        });
         video.pause();
         this.emit('intro-ended');
       }, 2000);

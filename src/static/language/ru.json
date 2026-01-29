@@ -57,7 +57,10 @@
   },
   "title": {
     "genplan": "Некспо",
-    "flyby_1_outside": "Корпус 1",
+    "flyby_1_outside": "Мастер план",
+    "flyby_2_outside": "Корпус 1",
+    "flyby_3_outside": "Корпус 2",
+    "flyby_4_outside": "Корпус 3",
     "favourites": "Избранное",
     "plannings": "Планировки"
   },
@@ -99,7 +102,10 @@
       "tooltip_1": "Корпус 5",
       "tooltip_2": "Корпус 7",
       "flyby": "Корпус",
-      "flyby_1_outside": "Корпус 1",
+      "flyby_1_outside": "Мастер план",
+      "flyby_2_outside": "Корпус 1",
+      "flyby_3_outside": "Корпус 2",
+      "flyby_4_outside": "Корпус 3",
       "flyby_1_inside": "Корпус 5",
       "flyby_2_inside": "Корпус 7",
       "plannings": "Планировка жилых помещений",

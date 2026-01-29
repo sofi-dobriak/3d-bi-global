@@ -7,39 +7,13 @@ polygon[data-type='infrastructure'] {
 
 polygon[data-type='flyby'] {
   stroke: var(--border-gray-200);
+  fill: var(--color-surface-success-available-transparent-20);
 }
 
-// polygon[data-type='flat'] {
-//   // fill: var(--hover-overlays-transparent-32);
-//   // fill: var(--color-surface-success-available-transparent-20);
-
-//   &[data-sale='2'],
-//   &[data-sale='3'],
-//   &[data-sale='4'],
-//   &[data-sale='5'],
-//   &[data-sale='6'],
-//   &[data-sale='0'] {
-//     fill: var(--color-special-accent-sold-overlays-transparent-16);
-//     cursor: auto;
-//   }
-
-//   &.active,
-//   &.polygon__selected {
-//     // fill: var(--color-surface-semantic-success) !important;
-//     fill: rgba(theme_vars.$color-semantic-success, 0.75) !important;
-//     pointer-events: all;
-//     stroke: rgb(255, 255, 255) !important;
-//   }
-//   &.polygon__filter-deselect {
-//     fill: transparent;
-//   }
-// }
-
 polygon[data-type='flat'] {
-  &[data-sale='1'] {
-    stroke: var(--border-gray-200);
-    cursor: pointer;
-  }
+  // fill: var(--hover-overlays-transparent-32);
+  stroke: var(--icon-gray-200);
+  fill: var(--color-surface-success-available-transparent-20);
 
   &[data-sale='2'],
   &[data-sale='3'],
@@ -47,50 +21,13 @@ polygon[data-type='flat'] {
   &[data-sale='5'],
   &[data-sale='6'],
   &[data-sale='0'] {
-    cursor: auto;
-  }
-
-  &[data-sale='1'] {
-    // fill: $sale-1;
-    fill: green;
-    fill-opacity: 0.55;
-    stroke: var(--border-gray-200);
-  }
-  &[data-sale='0'] {
-    // fill: $sale-0;
-    fill: green;
-    fill-opacity: 0.55;
-    stroke: var(--border-gray-200);
-  }
-
-  &[data-sale='1'] {
-    // fill: $sale-1;
-    fill: green;
-    fill-opacity: 0.55;
-    stroke: var(--border-gray-200);
-  }
-
-  &[data-sale='2'] {
-    // fill: $sale-2;
-    fill: green;
-    fill-opacity: 0.55;
-    stroke: var(--border-gray-200);
-  }
-
-  &[data-sale='3'] {
-    // fill: $sale-3;
-    fill: green;
-    fill-opacity: 0.55;
-    stroke: var(--border-gray-200);
+    fill: var(--color-special-accent-sold-overlays-transparent-16);
   }
 
   &.active,
   &.polygon__selected {
-    // fill: var(--color-surface-semantic-success) !important;
-    // fill: rgba($color-semantic-success, 0.75) !important;
-    fill: greenyellow;
-    pointer-events: all;
-    stroke: rgb(255, 255, 255) !important;
+    fill: var(--color-surface-semantic-success);
+    fill: rgba(theme_vars.$color-semantic-success, 0.75);
   }
   &.polygon__filter-deselect {
     fill: transparent;
@@ -99,7 +36,8 @@ polygon[data-type='flat'] {
 }
 
 polygon[data-type='floor'] {
-  // fill: var(--color-surface-success-available-transparent-20);
+  fill: var(--color-surface-success-available-transparent-20);
+  stroke: var(--icon-gray-200);
 }
 
 .hybrid,
