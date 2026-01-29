@@ -75,6 +75,12 @@
     background-color: var(--color-surface-brand-800);
     border-color: var(--border-brand-900);
     color: var(--text-gray-200);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-surface-brand-700);
+      border-color: var(--border-brand-800);
+    }
   }
 }
 
