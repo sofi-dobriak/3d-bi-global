@@ -55,6 +55,51 @@
       "outside": {
         "id": "flyby_1_outside",
         "generalWrapId": "#js-s3d__wrapper",
+        "imageUrl": "images/flyby/genplan/",
+        "sd_imageUrl": "images/flyby/genplan/",
+        "imageUrlDark": "images/flyby/genplan/",
+        "enableParalax": false,
+        "enableClouds": false,
+        "image_format": "jpg",
+        "defaultTheme": "light",
+        "class": "js-s3d__wrapper",
+        "SLIDER_MOBILE_FINGER_SWIPE": false,
+        "show_flat_polygons_tooltip": true,
+        "show_flat_polygons_tooltip_key": "area",
+        "numberSlide": {
+          "min": 0,
+          "max": 199
+        },
+        "verticalAlig_faq": "top || center || bottom",
+        "verticalAlign": "center",
+        "horizontalAlign_faq": "left || center || right",
+        "horizontalAlign": "center",
+        "video_keyframes": {},
+        "controlPoint": [
+          1,
+          40,
+          80,
+          120,
+          160
+        ],
+        "activeSlide": 1,
+        "rotateSpeedDefault": 24,
+        "rotateSpeed": [
+          {
+            "min": 79,
+            "max": 100,
+            "ms": 40
+          }
+        ],
+        "frameWithNorthDirection": 100,
+        "mouseSpeed": 0.5,
+        "startDegCompass": 60
+      }
+    },
+    "2": {
+      "outside": {
+        "id": "flyby_2_outside",
+        "generalWrapId": "#js-s3d__wrapper",
         "imageUrl": "images/flyby/1/outside/",
         "sd_imageUrl": "images/flyby/1/outside/",
         "imageUrlDark": "images/flyby/1/outside/",
@@ -95,9 +140,9 @@
         "startDegCompass": 60
       }
     },
-    "2": {
+    "3": {
       "outside": {
-        "id": "flyby_2_outside",
+        "id": "flyby_3_outside",
         "generalWrapId": "#js-s3d__wrapper",
         "imageUrl": "images/flyby/2/outside/",
         "sd_imageUrl": "images/flyby/2/outside/",
@@ -139,9 +184,9 @@
         "startDegCompass": 60
       }
     },
-    "3": {
+    "4": {
       "outside": {
-        "id": "flyby_3_outside",
+        "id": "flyby_4_outside",
         "generalWrapId": "#js-s3d__wrapper",
         "imageUrl": "images/flyby/3/outside/",
         "sd_imageUrl": "images/flyby/3/outside/",

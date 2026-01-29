@@ -225,7 +225,7 @@ export default function navBar(i18n, { logo }) {
 
         ${
           config.genplan
-            ? `<button class="s3d2-header__nav-button js-s3d-nav__btn" data-type="genplan">
+            ? `<button class="s3d2-header__nav-button js-s3d-nav__btn" data-type="flyby" data-flyby="1" data-side="outside">
           ${i18n.t('ctr.nav.genplan')}
         </button>`
             : ``
