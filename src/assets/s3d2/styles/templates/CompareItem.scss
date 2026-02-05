@@ -7,15 +7,15 @@
   width: 40%;
   border: 1px solid transparent;
   border-radius: var(--border-space-2);
-  transition: .25s ease-out;
-  &__close  {
+  transition: 0.25s ease-out;
+  &__close {
     width: 24px;
     height: 24px;
     position: absolute;
     right: 8px;
     top: 8px;
     transform-origin: center;
-    transition: .25s ease-out;
+    transition: 0.25s ease-out;
     cursor: pointer;
     z-index: 2;
     &:hover {
@@ -24,10 +24,10 @@
   }
   &__table {
     overflow-y: scroll;
-    height: 35vh;
+    // height: 35vh;
     margin-right: 4px;
     overscroll-behavior: none;
-    @media screen and (max-width:600px){
+    @media screen and (max-width: 600px) {
       overscroll-behavior: auto;
     }
     &::-webkit-scrollbar {
@@ -45,7 +45,7 @@
     &-cell {
       display: flex;
       align-items: center;
-      &>:nth-child(1) {
+      & > :nth-child(1) {
         margin-right: var(--space-2);
       }
     }
@@ -65,7 +65,7 @@
     position: relative;
     padding-bottom: 52.5%;
     margin-bottom: var(--space-5);
-
+    margin-top: 35px;
     border-radius: var(--border-space-2);
     img {
       position: absolute;
@@ -77,14 +77,13 @@
     }
   }
 }
-@media screen and (min-height:880px){
+@media screen and (min-height: 880px) {
   .mouseOnly,
   .hybrid {
-    .CompareItem:hover { 
+    .CompareItem:hover {
       border-color: var(--border-gray-600-transparent-88);
     }
   }
-
 }
 
 .landscape {
@@ -95,12 +94,13 @@
   }
 }
 
-.tablet { 
+.tablet {
   .CompareItem {
     &__table {
-        height: 196px;
-      }
+      // height: 196px;
+      // height: 100%;
     }
+  }
 }
 
 .mobile {

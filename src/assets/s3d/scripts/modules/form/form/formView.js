@@ -209,6 +209,7 @@ export default class FormView {
             rule: yup
               .string()
               .required(i18next.t('required'))
+              .min(2, i18next.t('name_too_short', { cnt: 2 }))
               .trim(),
             defaultMessage: i18next.t('name'),
             config: this.config,

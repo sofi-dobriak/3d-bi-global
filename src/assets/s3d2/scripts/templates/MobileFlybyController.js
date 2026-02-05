@@ -145,7 +145,7 @@ function MobileFunctionsMenu(i18n) {
         )}"`,
         i18n.t('ctr.menu.on_the_map'),
       )}
-      ${ButtonWithoutIcon('', '', i18n.t('ctr.menu.build_progress'))}
+      <!--${ButtonWithoutIcon('', '', i18n.t('ctr.menu.build_progress'))}-->
       ${ButtonWithoutIcon('', 'data-open-form', i18n.t('ctr.menu.callbackFormCall'), 'secondary')}
     </div>
   `;

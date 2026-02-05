@@ -14,24 +14,59 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     padding: var(--space-5);
     padding-top: var(--space-20);
-    @media screen and (max-width:768px){
+
+    & + .menu-wrap__overlay {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: 768px) {
       padding: var(--space-4);
     }
-    @media screen and (max-width:600px){
+
+    @media screen and (max-width: 600px) {
       max-width: 250px;
     }
+
     &.active {
       visibility: visible;
       opacity: 1;
-      transition: /*opacity .3s ease-in-out,*/ visibility .3s ease-in-out;
-      animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      transition: /*opacity .3s ease-in-out,*/ visibility 0.3s ease-in-out;
+      animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+      & + .menu-wrap__overlay {
+        z-index: 1999;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          visibility 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
     }
+
     &.slide-out-right {
-      -webkit-animation: slide-out-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-              animation: slide-out-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      -webkit-animation: slide-out-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: slide-out-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+      & + .menu-wrap__overlay {
+        z-index: 1999;
+        opacity: 0;
+        visibility: visible;
+        pointer-events: none;
+      }
     }
 
     &-bg {
@@ -42,7 +77,6 @@
       height: 85%;
       z-index: -1;
     }
-    
 
     @media screen and (max-width: 1024px) {
       .smarto_logo {
@@ -53,8 +87,8 @@
   }
 
   &-img {
-      margin-bottom: var(--space-2);
-    }
+    margin-bottom: var(--space-2);
+  }
 
   &-header {
     position: fixed;
@@ -83,15 +117,14 @@
       height: var(--btn);
       width: var(--btn);
       position: relative;
-      transition: background .4s ease-in-out;
+      transition: background 0.4s ease-in-out;
       position: absolute;
       right: var(--space-3);
       top: var(--space-3);
       z-index: 3;
-      @media screen and (max-width:768px){
+      @media screen and (max-width: 768px) {
         right: var(--space-2);
         top: var(--space-2);
-        
       }
 
       &-elem-wrapper {
@@ -118,7 +151,7 @@
 
       @media (hover: hover) {
         transform-origin: center;
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
         &:hover {
           transform: rotate(180deg);
           // background: var(--color-surface-brand-900);
@@ -150,12 +183,12 @@
       width: auto;
       padding-top: var(--space-2);
       padding-bottom: var(--space-2);
-      border-bottom: .5px solid var(--icon-gray-400);
+      border-bottom: 0.5px solid var(--icon-gray-400);
       a {
-        transition: color .3s ease-in-out;
+        transition: color 0.3s ease-in-out;
       }
     }
-    li~li {
+    li ~ li {
     }
     &-wrap {
       overflow: hidden;
@@ -164,22 +197,21 @@
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-
     }
     &-link {
       font-size: 20px;
       line-height: 150%;
       text-transform: uppercase;
-      
+
       color: var(--text-gray-800);
       svg {
         stroke: var(--text-gray-800);
         // fill: var(--text-gray-800);
       }
       .no-fill {
-        fill: transparent
+        fill: transparent;
       }
-      &>div {
+      & > div {
         text-decoration: none;
         color: var(--text-gray-800);
         cursor: pointer;
@@ -187,7 +219,7 @@
         @media screen and (min-width: 1023px) {
           &:hover {
             color: var(--text-gray-900);
-            transition: color .3s ease-in-out;
+            transition: color 0.3s ease-in-out;
           }
         }
       }
@@ -199,16 +231,15 @@
   }
 }
 
-
 @keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -220,7 +251,7 @@
   }
   100% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
 }

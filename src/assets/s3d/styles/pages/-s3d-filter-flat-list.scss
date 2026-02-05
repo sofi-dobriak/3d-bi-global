@@ -125,7 +125,7 @@
       flex-shrink: 0;
       width: var(--space-4);
       height: var(--space-4);
-       & {
+      & {
         transform: rotate(180deg);
       }
     }
@@ -138,7 +138,7 @@
     &.s3d-sort-inactive {
       svg {
         opacity: 0;
-      };
+      }
     }
 
     &:hover {
@@ -260,7 +260,7 @@
 
 .mobile {
   .s3d-filter__table .s3d-filter__th .s3d-sort__arrow {
-    display: none;
+    // display: none;
   }
 
   .s3d-filter__td {

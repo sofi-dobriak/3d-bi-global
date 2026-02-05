@@ -113,6 +113,7 @@ class FlatView extends EventEmitter {
         this.emit('hideInfoBox');
         return;
       }
+      if (deviceType !== 'mouseOnly') return;
       this.emit('mouseoverFlatHandler', target);
     });
 
@@ -197,7 +198,8 @@ class FlatView extends EventEmitter {
 
     model.on('updateExplicationFloorTitle', data => {
       this._model.wrapper.querySelectorAll('[data-flat-explication-title]').forEach(el => {
-        el.textContent = this.i18n.t(`Flat.explication_data.floor_${data.floor}`);
+        // el.textContent = this.i18n.t(`Flat.explication_data.floor_${data.floor}`);
+        el.textContent = this.i18n.t('Flat.information.title');
       });
 
       this._model.wrapper.querySelectorAll('[data-flat-explication-button="floor"]').forEach(el => {

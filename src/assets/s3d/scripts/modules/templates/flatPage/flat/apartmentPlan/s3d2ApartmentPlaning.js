@@ -83,10 +83,10 @@ export default function s3d2ApartmentPlanings(i18n, flat) {
                   </div>
                 </div>
 
-                
-                
+
+
               </div>
-              <button class="s3d2-apartment__flat-explication-screen-open" data-flat-explication-button> 
+              <button class="s3d2-apartment__flat-explication-screen-open" data-flat-explication-button>
                  Layout Details
               </button>
               <div class="s3d2-apartment__flat-explication-screen-socials-wrap">
@@ -100,12 +100,12 @@ export default function s3d2ApartmentPlanings(i18n, flat) {
                   <a class="s3d2-apartment__flat-explication-screen-socials-item" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M10.1143 12.9492L10.1143 21L13.3193 21L13.3193 12.9502L15.8281 12.9502L16.2266 9.75098L13.3184 9.75098L13.3184 7.54688C13.3191 6.62223 13.5684 5.98843 14.8564 5.98828L16.5 5.98828L16.5 3.12695C16.2165 3.08796 15.2417 3.00001 14.1064 3C11.7374 3 10.1143 4.49049 10.1143 7.22949L10.1143 9.75L7.5 9.75L7.5 12.9492L10.1143 12.9492Z" fill="#1A1E21"/>
-                    </svg>                 
+                    </svg>
                   </a>
                   <a class="s3d2-apartment__flat-explication-screen-socials-item" href="https://www.x.com/" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M16.9718 4L19.5995 4L13.83 10.3653L20.5706 19L15.2809 19L11.1394 13.7528L6.39817 19L3.77048 19L9.88273 12.1919L3.42773 4L8.84878 4L12.5904 8.79336L16.9718 4ZM16.0521 17.5055L17.5088 17.5055L8.08333 5.43912L6.51813 5.43912L16.0521 17.5055Z" fill="#1A1E21"/>
-                    </svg>             
+                    </svg>
                   </a>
                   <a class="s3d2-apartment__flat-explication-screen-socials-item" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -121,8 +121,8 @@ export default function s3d2ApartmentPlanings(i18n, flat) {
                 <div class="s3d2-apartment__flat-explication-screen-buttons--floor-wrap">
                     <div class="s3d2-apartment__flat-explication-screen-buttons--floor">${$floorButtons()}</div>
                 </div>
-                
-                
+
+
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="s3d2-apartment__flat-explication-screen-slide">
@@ -163,7 +163,7 @@ export default function s3d2ApartmentPlanings(i18n, flat) {
                   </div>
               </div>
             </div>
-          
+
         </div>
       </div>
     `;

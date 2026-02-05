@@ -159,7 +159,7 @@ function s3d2_renderVillaContact_v2({
       <div class="s3d2__contact--v2__content__sales-department">
         <h3 class="s3d2__contact--v2__content__sales-department__title">${i18n.t(
           'Flat.contactUs.departmentTitle.1',
-        )}</h3>
+        )}:</h3>
         <a href="${get(
           contacts,
           'sales_department.google_maps_link',
@@ -209,7 +209,7 @@ function s3d2_renderVillaContact_v2({
     ? `<div class="s3d2__contact--v2__content__working-hours">
         <h3 class="s3d2__contact--v2__content__working-hours__title">${i18n.t(
           'Flat.contactUs.working_hours.title',
-        )}</h3>
+        )}:</h3>
         <p class="s3d2__contact--v2__content__working-hours__text">${get(
           contacts,
           ['working_hours', 'weekdays', lang],

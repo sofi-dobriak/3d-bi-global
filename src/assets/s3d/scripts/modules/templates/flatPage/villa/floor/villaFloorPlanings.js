@@ -75,7 +75,7 @@ export default function s3dVillaFloorPlanings(i18n, flat) {
             </div>
             <div class="s3d-villa__floor-explication-screen-table">
               <div class="s3d-villa__floor-explication-screen-table-inner">
-                <div class="s3d-villa__floor-explication-screen-table__title" data-flat-explication-title> 1st floor </div>
+                <div class="s3d-villa__floor-explication-screen-table__title" data-flat-explication-title></div>
                 <div class="s3d-villa__floor-explication-screen-info ">
                     <div class="s3d-villa__floor-explication-screen-info-row  ">
                         <div class="s3d-villa__floor-explication-screen-info-row-title">

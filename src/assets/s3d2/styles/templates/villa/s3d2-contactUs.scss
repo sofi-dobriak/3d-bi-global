@@ -32,10 +32,11 @@
     flex-direction: column;
     gap: 40px;
     width: calc((458 / 1920) * 100vw);
-    padding: var(--space-5) 0;
+    padding: 0;
 
     @media screen and (max-width: 1366px) {
       width: 48vw;
+      padding: var(--space-5) 0;
     }
 
     @media screen and (max-width: 768px) {
@@ -64,15 +65,21 @@
 
     &__submit-wrapper {
       display: flex;
-      justify-content: center;
-      align-self: flex-start;
-      min-width: 170px;
+      justify-content: flex-start;
+      width: 100%;
 
       @media screen and (max-width: 768px) {
-        align-self: center;
+        align-items: center;
+        justify-content: center;
       }
 
       .form-progress-button {
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+          transform-origin: center center;
+        }
+
         button {
           @include s3d2_fonts.fonts-3d-small-uppercase;
           color: var(--s3d2-color-text-gray-200);
@@ -365,8 +372,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: var(--space-32) var(--space-6) 0 var(--space-6);
+  // padding: var(--space-32) var(--space-6) 0 var(--space-6); з нового дизайну
+  padding: var(--space-28) var(--space-6) 0 var(--space-6); //зі старого дизайну
   gap: var(--space-12);
+
+  @media screen and (max-width: 768px) {
+    padding: var(--space-24) var(--space-5) 0 var(--space-5);
+  }
 
   &__content {
     display: flex;

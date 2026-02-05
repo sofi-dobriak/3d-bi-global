@@ -16,7 +16,6 @@
   opacity: 0;
   @media screen and (max-width: 600px) {
     height: calc(var(--vh, 1vh) * 100);
-    background-color: var(--surface-gray-900-transperent-40);
   }
 
   .form-overflow {
@@ -51,7 +50,7 @@
       max-width: 920px;
       overflow: hidden;
 
-      @media screen and (max-width:768px){
+      @media screen and (max-width: 768px) {
         width: calc(100% - var(--space-3) * 2);
         flex-direction: column;
         gap: var(--space-5);
@@ -69,7 +68,7 @@
           object-fit: contain;
           object-position: left top;
         }
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
           display: none;
         }
       }
@@ -78,7 +77,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        @media screen and (min-width:769px){
+        @media screen and (min-width: 769px) {
           width: 39.93%;
         }
       }
@@ -87,7 +86,7 @@
         color: var(--text-gray-900);
         text-align: left;
         margin-bottom: var(--space-6);
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
           @include fonts.text-style-villas-1366-h-4;
           text-align: center;
         }
@@ -101,7 +100,7 @@
       }
 
       form {
-        @media screen and (min-width:769px){ 
+        @media screen and (min-width: 769px) {
           width: 50%;
         }
       }
@@ -188,7 +187,7 @@
           padding: var(--space-5) var(--space-8);
         }
 
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
           padding: var(--space-3) var(--space-8);
         }
 
@@ -284,7 +283,7 @@
         @include fonts.text-style-villas-1366-body;
       }
       form {
-        gap: var(--space-6)
+        gap: var(--space-6);
       }
       &__title {
         @include fonts.text-style-3-d-fonts-1920-h-2-bold;
@@ -293,15 +292,14 @@
   }
 }
 
-
 /* Button container */
 .form-progress-button {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	// min-width: 250px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  // min-width: 250px;
   cursor: pointer;
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     transform: scale(0.75);
     transform-origin: top left;
     margin-bottom: -7px;
@@ -310,25 +308,26 @@
 
 /* Button style */
 .form-progress-button button {
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-	// width: 250px;
-	height: 70px;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  // width: 250px;
+  height: 70px;
   text-transform: uppercase;
-	border: 1px solid var(--color-brand-800);
-	border-radius: 40px;
-	background: var(--color-brand-800);
-	color: var(--text-gray-200);
+  border: 1px solid var(--color-brand-800);
+  border-radius: 40px;
+  background: var(--color-brand-800);
+  color: var(--text-gray-200);
   padding: var(--space-6) var(--space-8);
-  font-family: "Inter Display";
+  font-family: 'Inter Display';
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 16.9px */
-	-webkit-tap-highlight-color: transparent;
-	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s,
+    border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
   cursor: pointer;
 }
 
@@ -338,78 +337,78 @@
 }
 
 .form-progress-button button:focus {
-	outline: none;
+  outline: none;
 }
 
 /* Text (transition for when returning to initial state) */
 .form-progress-button button span {
-	-webkit-transition: opacity 0.3s 0.1s;
-	transition: opacity 0.3s 0.1s;
+  -webkit-transition: opacity 0.3s 0.1s;
+  transition: opacity 0.3s 0.1s;
 }
 
 /* Common style of SVGs */
 .form-progress-button svg {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .form-progress-button svg path {
-	opacity: 0;
-	fill: none;
+  opacity: 0;
+  fill: none;
 }
 
 .form-progress-button svg.form-progress-circle path {
-	stroke: var(--color-brand-800);
-	stroke-width: 5;
+  stroke: var(--color-brand-800);
+  stroke-width: 5;
 }
 
 .form-progress-button svg.checkmark path,
 .form-progress-button svg.cross path {
-	stroke: var(--color-surface-gray-300);
-	stroke-linecap: round;
-	stroke-width: 4;
-	-webkit-transition: opacity 0.1s;
-	transition: opacity 0.1s;
+  stroke: var(--color-surface-gray-300);
+  stroke-linecap: round;
+  stroke-width: 4;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
 }
 
 /* Loading, success and error effects */
 .loading.form-progress-button button {
-	width: 70px; /* make a circle */
-	border-width: 5px;
-	border-color: var(--color-surface-gray-300);
-	background-color: transparent;
-	color: #fff;
+  width: 70px; /* make a circle */
+  border-width: 5px;
+  border-color: var(--color-surface-gray-300);
+  background-color: transparent;
+  color: #fff;
 }
 
 .loading.form-progress-button span {
-	-webkit-transition: opacity 0.15s;
-	transition: opacity 0.15s;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
 }
 
 .loading.form-progress-button span,
 .success.form-progress-button span,
 .error.form-progress-button span {
-	opacity: 0; /* keep it hidden in all states */
+  opacity: 0; /* keep it hidden in all states */
 }
 
 .success.form-progress-button button,
 .error.form-progress-button button {
-	-webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
-	transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+  -webkit-transition: background-color 0.3s, width 0.3s, border-width 0.3s;
+  transition: background-color 0.3s, width 0.3s, border-width 0.3s;
 }
 
 .success.form-progress-button button {
-	border-color: var(--color-brand-800);
-	background-color: var(--color-brand-800);
+  border-color: var(--color-brand-800);
+  background-color: var(--color-brand-800);
 }
 
 .error.form-progress-button button {
-	border-color: var(--color-semantic-danger);
-	background-color: var(--color-semantic-danger);
+  border-color: var(--color-semantic-danger);
+  background-color: var(--color-semantic-danger);
 }
 
 .loading.form-progress-button svg.form-progress-circle path {
@@ -425,31 +424,36 @@
 .loading.form-progress-button svg.form-progress-circle path,
 .success.form-progress-button svg.checkmark path,
 .error.form-progress-button svg.cross path {
-	opacity: 1;
-	-webkit-transition: stroke-dashoffset 0.3s;
-	transition: stroke-dashoffset 0.3s;
+  opacity: 1;
+  -webkit-transition: stroke-dashoffset 0.3s;
+  transition: stroke-dashoffset 0.3s;
 }
 
 /* Optional elastic effect for the width of the button */
 .elastic.form-progress-button button {
-	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1), border-width 0.3s, border-color 0.3s;
-	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
-	transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1),
+    border-width 0.3s, border-color 0.3s;
+  -webkit-transition: background-color 0.3s, color 0.3s,
+    width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6), border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.25, 0.25, 0.4, 1.6),
+    border-width 0.3s, border-color 0.3s;
 }
 
 .loading.elastic.form-progress-button button {
-	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, 0, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
-	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
-	transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+  -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, 0, 0.75, 0.75),
+    border-width 0.3s, border-color 0.3s;
+  -webkit-transition: background-color 0.3s, color 0.3s,
+    width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75), border-width 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, width 0.3s cubic-bezier(0.6, -0.6, 0.75, 0.75),
+    border-width 0.3s, border-color 0.3s;
 }
-
 
 @keyframes strokeanim {
   50% {
     transform: rotate(360deg);
   }
-  to { 
-    stroke-dashoffset: 0; 
+  to {
+    stroke-dashoffset: 0;
     transform: rotate(0deg);
   }
 }
