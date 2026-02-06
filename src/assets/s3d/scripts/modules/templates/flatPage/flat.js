@@ -350,10 +350,19 @@ function renderFlatFlyby(link, flatId, flat, getFlat) {
 
     svg.querySelectorAll(`[data-id="${flatId}"]`).forEach(el => el.classList.add('active-flat'));
     container.insertAdjacentElement('beforeend', svg);
-    container.scrollTo({
-      left: container.scrollWidth / 2 - window.innerWidth / 2,
-      behavior: 'smooth',
-    });
+    // container.scrollTo({
+    //   left: container.scrollWidth / 2 - window.innerWidth / 2,
+    //   behavior: 'smooth',
+    // });
+    const scrollEl = container.closest('.s3d-villa__flyby-wrapper');
+    console.log('scrollEl', scrollEl);
+
+    setTimeout(() => {
+      scrollEl.scrollTo({
+        left: scrollEl.scrollWidth / 2 - window.innerWidth / 2,
+        behavior: 'smooth',
+      });
+    }, 3000);
   });
 }
 

@@ -597,7 +597,7 @@
   }
 
   .s3d-filter__top-sticky {
-    padding: var(--space-5) 0 0 0;
+    padding: var(--space-8) 0 0 0;
   }
 }
 
@@ -686,8 +686,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 10000;
-    pointer-events: none;
+    z-index: 20002;
+    pointer-events: all;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
 

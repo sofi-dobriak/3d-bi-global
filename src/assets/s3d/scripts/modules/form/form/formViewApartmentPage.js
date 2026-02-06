@@ -160,7 +160,7 @@ export default class FormViewPage {
                           ${i18next.t('Your email')}
                         </div>
                         ${TextInput({
-                          text: i18next.t('Type your Email'),
+                          text: this.i18n.t('Flat.contactUs.form.email_placeholder'),
                           className: '',
                           attributes: 'name="email"',
                           type: 'email',
