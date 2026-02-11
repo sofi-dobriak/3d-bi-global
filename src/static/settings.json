@@ -392,7 +392,9 @@
   },
   "form": {
     "prefered_countries": [
-      "us"
+      "kz",
+      "us",
+      "ru"
     ]
   },
   "flyby_finish_dates": {},
@@ -418,28 +420,25 @@
   "currency_list": [],
   "show_prices": false,
   "languages": "en/ru/kk",
-  "show_phoneNumber": false,
+  "show_phoneNumber": "+7 (701) 7360 360",
   "hideDocumentation": true,
   "hideExterior": true,
   "hideFinancialTerms": true,
   "hideConstructionProgress": true,
   "social_media_links_faq": "Якщо строчка пуста, то кнопка не буде відображатися",
   "social_media_links": {
-    "telegram": "#",
-    "viber": "#",
-    "whatsapp": "#",
-    "youtube": "https://www.youtube.com/user/DoraPuig?app=desktop",
-    "twitter": "https://twitter.com/DoraPuig",
-    "tiktok": "#",
-    "facebook": "https://www.facebook.com/dora.puig",
-    "instagram": "https://www.instagram.com/dorapuig/"
+    "telegram": "https://t.me/bigroupnewbot",
+    "whatsapp": "https://api.whatsapp.com/send/?phone=%2B77783600055&text&type=phone_number&app_absent=0",
+    "youtube": "https://www.youtube.com/user/BIGroupHolding",
+    "tiktok": "https://www.tiktok.com/@bi.groupkz?_t=8lbKNcpe1bR&_r=1",
+    "instagram": "https://www.instagram.com/bi.group"
   },
   "manager_info": {
-    "tel": "+1 805 781 1978",
-    "email": "jmeier@icloud.com",
+    "tel": "+7 (701) 7360 360",
+    "email": "",
     "name": {
-      "en": "Janet Meier",
-      "uk": "Janet Meier"
+      "en": "",
+      "uk": ""
     },
     "img": "/wp-content/themes/3d/assets/s3d/images/manager-img.png",
     "img_2": "/wp-content/themes/3d/assets/s3d/images/image-portrait.png",
@@ -448,47 +447,33 @@
       "uk": "Sales agent"
     },
     "socials": {
-      "telegram": "#",
-      "viber": "#",
-      "whatsapp": "#",
-      "youtube": "https://www.youtube.com/user/DoraPuig?app=desktop",
-      "twitter": "https://twitter.com/DoraPuig",
-      "tiktok": "#",
-      "facebook": "https://www.facebook.com/dora.puig",
-      "instagram": "https://www.instagram.com/dorapuig/"
+      "telegram": "https://t.me/bigroupnewbot",
+      "whatsapp": "https://api.whatsapp.com/send/?phone=%2B77783600055&text&type=phone_number&app_absent=0",
+      "youtube": "https://www.youtube.com/user/BIGroupHolding",
+      "tiktok": "https://www.tiktok.com/@bi.groupkz?_t=8lbKNcpe1bR&_r=1",
+      "instagram": "https://www.instagram.com/bi.group"
     }
   },
   "g_contacts": {
-    "global_number": "+38 067 263 22 22",
-    "email": "Twins.vn.ua@gmail.com",
+    "global_number": "+7 (701) 7360 360",
+    "email": "",
     "construction_department": {
       "google_maps_link": "https://maps.app.goo.gl/uga9aqpbfXeUiRia9",
       "text": {
-        "en": "Astana, Kazakhstan",
-        "ru": "Астана, Казахстан",
-        "kk": "Астана, Казахстан"
+        "en": "Kazakhstan, Astana, street No. 29/2, postal code 020000",
+        "ru": "Казахстан, Астана,  улица № 29/2, почтовый индекс 020000",
+        "kk": "Қазақстан, Астана, көше № 29/2, пошталық индекс 020000"
       }
     },
     "sales_department": {
       "google_maps_link": "https://maps.app.goo.gl/uga9aqpbfXeUiRia9",
       "text": {
-        "en": "Astana, Kazakhstan",
-        "ru": "Астана, Казахстан",
-        "kk": "Астана, Казахстан"
+        "en": "Kazakhstan, Astana, Yesil district, Syganak street, building 17M, Green Tower business center, postal code 010000",
+        "ru": "Казахстан, Астана, район Есиль, улица Сыганак, дом 17М, БЦ Green Tower, почтовый индекс 010000",
+        "kk": "Қазақстан, Астана, Есіл ауданы, Сығанақ көшесі, 17М ғимарат, Green Tower бизнес орталығы, пошталық индексі 010000"
       }
     },
-    "working_hours": {
-      "weekdays": {
-        "en": "Monday - Friday: 09:00 - 20:00",
-        "ru": "Понедельник - Пятница: 09:00 - 20:00",
-        "kk": "Дүйсенбі - Жұма: 09:00 - 20:00"
-      },
-      "weekends": {
-        "en": "Saturday - Sunday: Flexible schedule",
-        "ru": "Суббота - Воскресенье: гибкий график",
-        "kk": "Сенбі - Жексенбі: Икемді кесте"
-      }
-    }
+    "working_hours": {}
   },
   "g_contact_advantaged_list": [
     {

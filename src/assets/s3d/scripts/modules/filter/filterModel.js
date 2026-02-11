@@ -237,7 +237,6 @@ class FilterModel extends EventEmitter {
     });
   }
 
-
   // запускает фильтр квартир
   filterFlatStart() {
     const filterSettings = this.getFilterParam(this.configProject);
