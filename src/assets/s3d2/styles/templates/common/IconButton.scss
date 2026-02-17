@@ -13,23 +13,18 @@
   align-items: center;
   justify-content: center;
   transition: 0.25s ease-out;
+
   svg {
     width: 24px;
     height: 24px;
     fill: var(--icon-gray-900);
   }
+
   &.s3d_audioAssistantState-active {
     background-color: var(--color-brand-900) !important;
     svg {
       fill: var(--icon-gray-200);
     }
-  }
-  &--dark {
-    border-radius: var(--Spacing-Corner-radius-radius-2, 8px);
-    background: var(--colors-surface-gray-surface-gray-900-transparent-60, rgba(26, 30, 33, 0.6));
-    backdrop-filter: blur(20px);
-    border-color: transparent;
-    color: var(--text-gray-200);
   }
 
   &.active {
@@ -51,7 +46,7 @@
   &--dark {
     border-radius: var(--Spacing-Corner-radius-radius-2, 8px);
     background: var(--colors-gray-900-transparent-60, rgba(26, 30, 33, 0.6));
-    backdrop-filter: blur(20px);
+    // backdrop-filter: blur(20px);
     border-color: transparent;
     svg {
       fill: var(--icon-gray-200);

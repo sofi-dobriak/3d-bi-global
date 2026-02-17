@@ -65,6 +65,7 @@
         max-height: calc(100vh - var(--s3d-header) - var(--space-5));
         overflow-y: auto;
         overflow-x: hidden;
+        min-width: 300px;
       }
 
       .s3d-floor__info-container {
@@ -106,9 +107,9 @@
         'menu';
     }
 
-    &__svg-container {
-      overflow: hidden;
-    }
+    // &__svg-container {
+    //   overflow: hidden;
+    // }
 
     &__svg-wrapper {
       // width: 100%;
@@ -118,6 +119,7 @@
       align-items: center;
       text-align: center;
       overflow: hidden;
+
       @media screen and (min-width: 1025px) {
         width: 100%;
         height: 100%;
@@ -125,25 +127,18 @@
     }
 
     &__svg-container {
-      //&__svg {
       grid-area: svg;
       max-height: 100%;
       width: 100%;
       padding: 40px;
       align-self: center;
-      // max-height: calc(var(--vh, 1vh) * 100 - var(--s3d-header));
       height: calc(var(--vh, 1vh) * 100 - var(--s3d-header) - (var(--space-4) * 2));
-      // background-color: var(--color-surface-gray-100);
+      position: relative;
 
       &--inner {
         overflow: hidden;
         width: 100%;
         height: 100%;
-      }
-
-      @media screen and (max-width: 1024px) {
-        // padding: 20px;
-        // height: calc(100vh - var(--s3d-header) - var(--controller-h) - var(--menu-h));
       }
 
       svg {
@@ -296,7 +291,7 @@
       button {
         .floor-list {
           position: absolute;
-          left: 0;
+          left: -30px;
           bottom: 100%;
           background: var(--color-surface-gray-100);
           // border: 1px solid var(--border-gray-400);
@@ -724,6 +719,10 @@
       [data-swiper-floor-list-wrapper] {
         width: 175px;
       }
+
+      @media screen and (max-width: 1024px) {
+        margin-top: var(--space-12);
+      }
     }
 
     & > * {
@@ -747,6 +746,10 @@
 
     .s3d-floor__menu-container {
       order: 1;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: var(--space-4);
+      }
     }
 
     .s3d-floor__svg-container {
@@ -844,5 +847,71 @@
         width: 50%;
       }
     }
+  }
+}
+
+.s3d2-floor-page__info-label {
+  &.first,
+  &.second,
+  &.third {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface-brand-800);
+    border-radius: 8px;
+    padding: 8px;
+    gap: 4px;
+    right: var(--space-4);
+    color: #fff;
+
+    p {
+      @include fonts.text-style-3-d-fonts-1920-body-regular;
+    }
+  }
+
+  &.first {
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    width: fit-content;
+
+    @media screen and (max-width: 1024px) {
+      top: -34px;
+    }
+  }
+
+  &.second {
+    transform: rotate(90deg);
+    right: 0;
+    top: 40%;
+
+    svg {
+      transform: rotate(0);
+    }
+
+    @media screen and (max-width: 768px) {
+      right: -22px;
+    }
+  }
+
+  &.third {
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    width: fit-content;
+
+    svg {
+      transform: rotate(180deg);
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: -18px;
+    }
+  }
+
+  svg {
+    width: 18px !important;
+    height: 18px !important;
+    fill: white;
   }
 }

@@ -395,6 +395,11 @@
     "title-3": "уровень",
     "number_rooms": "Количество спален",
     "apps_from": "Резиденции от",
+    "infrastructure": {
+      "expo_center": "Експоцентр Nexpo",
+      "yard": "Двор",
+      "central_mosque": "Центральная Мечеть"
+    },
     "information": {
       "title": "Информация",
       "build": "Корпус",

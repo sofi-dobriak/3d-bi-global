@@ -395,6 +395,11 @@
     "title-3": "деңгей",
     "number_rooms": "Жатын бөлмелер саны",
     "apps_from": "Тұрғын үйлер бастап",
+    "infrastructure": {
+      "expo_center": "Nexpo Expocentre",
+      "yard": "Aула",
+      "central_mosque": "Орталық мешіт"
+    },
     "information": {
       "title": "Ақпарат",
       "build": "Ғимарат",

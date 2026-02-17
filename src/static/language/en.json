@@ -394,6 +394,11 @@
     "title-3": "level",
     "number_rooms": "Number of Bedrooms",
     "apps_from": "Residences from",
+    "infrastructure": {
+      "expo_center": "Nexpo Expo Center",
+      "yard": "Yard",
+      "central_mosque": "Central Mosque"
+    },
     "information": {
       "title": "Information",
       "build": "Build",

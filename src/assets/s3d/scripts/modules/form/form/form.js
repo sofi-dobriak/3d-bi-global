@@ -5,18 +5,18 @@ import initView from './formController';
 import { langDetect } from '../../helpers/helpers';
 import dispatchTrigger from '../../helpers/triggers';
 
-// const sendForm = async data => {
-//   const response = await axios.post('/wp-admin/admin-ajax.php', data);
-//   return response.data;
-// };
-
 const sendForm = async data => {
-  const response = await axios.post(
-    document.querySelector('[data-crm-url]').getAttribute('data-crm-url'),
-    data,
-  );
+  const response = await axios.post('/wp-admin/admin-ajax.php', data);
   return response.data;
 };
+
+// const sendForm = async data => {
+//   const response = await axios.post(
+//     document.querySelector('[data-crm-url]').getAttribute('data-crm-url'),
+//     data,
+//   );
+//   return response.data;
+// };
 
 const lang = langDetect();
 (async () => {

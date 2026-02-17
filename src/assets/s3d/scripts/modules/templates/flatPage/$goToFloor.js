@@ -50,7 +50,7 @@ function $goToFlat(i18n, flat, floorList = []) {
               </svg>
           </div>
         </article>
-        
+
         <!--${ButtonWithoutIcon(
           's3d-flat__to--floor',
           'id="s3d-to-floor"',

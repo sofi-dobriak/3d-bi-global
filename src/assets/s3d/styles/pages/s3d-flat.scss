@@ -191,6 +191,15 @@
       &-info-wrapper {
         padding-bottom: 24px;
         overflow: hidden;
+
+        .s3d2-floor-page__info-label {
+          @media screen and (max-width: 1024px) {
+            bottom: auto;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
         @media screen and (max-width: 768px) {
           padding-bottom: 16px;
         }
@@ -1562,7 +1571,6 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     }
   }
 }
-
 
 @include meta.load-css('s3d-smarto-tours');
 @include meta.load-css('s3d-smarto-tours-v3');
