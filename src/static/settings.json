@@ -7,49 +7,7 @@
     "video_url": "/wp-content/themes/3d/assets/s3d/images/nexpro-intro-video.mp4",
     "faq": "Видалити цей об'єкт, якщо не потрібен інтро екран перед обльотом"
   },
-  "genplan": {
-    "id": "genplan",
-    "generalWrapId": "#js-s3d__wrapper",
-    "imageUrl": "images/flyby/genplan/",
-    "sd_imageUrl": "images/flyby/genplan/",
-    "imageUrlDark": "images/flyby/genplan/",
-    "enableParalax": false,
-    "enableClouds": false,
-    "image_format": "jpg",
-    "show_flat_polygons_tooltip": true,
-    "show_flat_polygons_tooltip_key": "area",
-    "defaultTheme": "light",
-    "class": "js-s3d__wrapper",
-    "SLIDER_MOBILE_FINGER_SWIPE": false,
-    "numberSlide": {
-      "min": 0,
-      "max": 199
-    },
-    "verticalAlig_faq": "top || center || bottom",
-    "verticalAlign": "center",
-    "horizontalAlign_faq": "left || center || right",
-    "horizontalAlign": "center",
-    "video_keyframes": {},
-    "controlPoint": [
-      1,
-      40,
-      80,
-      120,
-      160
-    ],
-    "activeSlide": 1,
-    "rotateSpeedDefault": 24,
-    "rotateSpeed": [
-      {
-        "min": 79,
-        "max": 100,
-        "ms": 40
-      }
-    ],
-    "frameWithNorthDirection": 100,
-    "mouseSpeed": 0.5,
-    "startDegCompass": 60
-  },
+  "genplan": {},
   "flyby": {
     "1": {
       "outside": {
@@ -74,7 +32,9 @@
         "verticalAlign": "center",
         "horizontalAlign_faq": "left || center || right",
         "horizontalAlign": "center",
-        "video_keyframes": {},
+        "video_keyframes": {
+          "1": "/assets/video-wp/NexpoGlobal_FullHD_compress_12mb.mp4"
+        },
         "controlPoint": [
           1,
           40,

@@ -117,7 +117,7 @@
       "flat_shot": "Appartments",
       "back": "Back",
       "menu": "Menu",
-      "callback": "Inquire for Pricing",
+      "callback": "Purchase method",
       "short_callback": "Inquire",
       "intro": "Intro",
       "plannings_availability": "Residence layouts",
@@ -395,9 +395,11 @@
     "number_rooms": "Number of Bedrooms",
     "apps_from": "Residences from",
     "infrastructure": {
-      "expo_center": "Nexpo Expo Center",
-      "yard": "Yard",
-      "central_mosque": "Central Mosque"
+      "top": "View of the expo",
+      "right": "View in the yard",
+      "bottom": "View of the mosque",
+      "left": "View of the mega silk way",
+      "alley": "View of the alley"
     },
     "information": {
       "title": "Information",

@@ -104,18 +104,6 @@ function Floor(i18n, floor, hideOverlay = false, showPrices, getFlat) {
 
     </div>
       <div class="s3d-floor__svg-container ">
-        <div class="s3d2-floor-page__info-label first">
-          <p>${i18n.t('Floor.infrastructure.expo_center')}</p>
-          ${s3d2spriteIcon('Arrow up')}
-        </div>
-        <div class="s3d2-floor-page__info-label second">
-          <p>${i18n.t('Floor.infrastructure.yard')}</p>
-          ${s3d2spriteIcon('Arrow up')}
-        </div>
-        <div class="s3d2-floor-page__info-label third">
-          <p>${i18n.t('Floor.infrastructure.central_mosque')}</p>
-          ${s3d2spriteIcon('Arrow up')}
-        </div>
         <div class="s3d-floor__svg-container--inner">
           <div class="s3d-floor__svg-wrapper js-s3d-floor"></div>
         </div>
