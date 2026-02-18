@@ -678,8 +678,10 @@
 
 .desktop {
   .s3d-floor__svg-container {
-    width: calc(100% - var(--space-4));
-    margin-left: auto;
+    // width: calc(100% - var(--space-4));
+    // margin-left: auto;
+    width: auto;
+    margin: auto;
   }
 
   .s3d-floor__zoom-wrapper {
@@ -755,6 +757,8 @@
     .s3d-floor__svg-container {
       order: 2;
       padding: 0;
+      width: auto;
+      margin: auto;
     }
 
     & > .s3d-floor__nav-wrapper {
@@ -863,6 +867,7 @@
     gap: 4px;
     right: var(--space-4);
     color: #fff;
+    width: max-content;
 
     p {
       @include fonts.text-style-3-d-fonts-1920-body-regular;
@@ -873,7 +878,6 @@
     transform: translateX(-50%);
     top: 0;
     left: 50%;
-    width: fit-content;
 
     @media screen and (max-width: 1024px) {
       top: -34px;
@@ -890,7 +894,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      right: -22px;
+      right: -36px;
     }
   }
 
@@ -898,14 +902,13 @@
     bottom: 0;
     transform: translateX(-50%);
     left: 50%;
-    width: fit-content;
 
     svg {
       transform: rotate(180deg);
     }
 
     @media screen and (max-width: 1024px) {
-      bottom: -18px;
+      bottom: -22px;
     }
   }
 
