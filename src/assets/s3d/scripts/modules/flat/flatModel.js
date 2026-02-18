@@ -429,6 +429,21 @@ class FlatModel extends EventEmitter {
     );
 
     this.emit('setFlat', html);
+
+    // Оновлюємо price link
+    const priceLink = flat.customProperties?.find(
+      el => get(el, 'value.crm_properties_id', false) == 52,
+    );
+    const priceLinkUrl = get(priceLink, 'value.value', null);
+    const container = document.querySelector('.js-price-link-container');
+    if (container) {
+      container.innerHTML = priceLinkUrl
+        ? `<a class="ButtonIconLeft active ButtonIconLeft--secondary text-uppercase-important" href="${priceLinkUrl}" target="_blank">
+          <span>${this.i18n.t('ctr.nav.callback')}</span>
+         </a>`
+        : '';
+    }
+
     this.checkPlaning();
 
     if (document.querySelector('[data-flat-explication-image]')) {

@@ -854,67 +854,79 @@
   }
 }
 
+.s3d-flat__floor-info-wrapper {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.s3d2-floor-page__info-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .s3d2-floor-page__info-label {
-  &.first,
-  &.second,
-  &.third {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    background-color: var(--color-surface-brand-800);
-    border-radius: 8px;
-    padding: 8px;
-    gap: 4px;
-    right: var(--space-4);
-    color: #fff;
-    width: max-content;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface-brand-800);
+  border-radius: 8px;
+  padding: 8px;
+  gap: 4px;
+  color: #fff;
+  width: max-content;
+  pointer-events: all;
 
-    p {
-      @include fonts.text-style-3-d-fonts-1920-body-regular;
-    }
-  }
-
-  &.first {
-    transform: translateX(-50%);
-    top: 0;
-    left: 50%;
-
-    @media screen and (max-width: 1024px) {
-      top: -34px;
-    }
-  }
-
-  &.second {
-    transform: rotate(90deg);
-    right: 0;
-    top: 40%;
-
-    svg {
-      transform: rotate(0);
-    }
-
-    @media screen and (max-width: 768px) {
-      right: -36px;
-    }
-  }
-
-  &.third {
-    bottom: 0;
-    transform: translateX(-50%);
-    left: 50%;
-
-    svg {
-      transform: rotate(180deg);
-    }
-
-    @media screen and (max-width: 1024px) {
-      bottom: -22px;
-    }
+  p {
+    @include fonts.text-style-3-d-fonts-1920-body-regular;
   }
 
   svg {
     width: 18px !important;
     height: 18px !important;
     fill: white;
+  }
+
+  &.top {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.right {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+
+    @media screen and (max-width: 768px) {
+      right: -10px;
+      top: 60%;
+    }
+  }
+
+  &.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.left {
+    position: absolute;
+    left: -20px;
+    top: 30%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: left center;
+
+    svg {
+      transform: rotate(-180deg);
+    }
   }
 }

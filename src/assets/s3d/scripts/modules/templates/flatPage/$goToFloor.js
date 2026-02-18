@@ -1,6 +1,8 @@
 import ButtonWithoutIcon from '../../../../../s3d2/scripts/templates/common/ButtonWithoutIcon';
 import IconButton from '../../../../../s3d2/scripts/templates/common/IconButton';
 import TinyButton from '../../../../../s3d2/scripts/templates/common/TinyButton';
+import s3d2spriteIcon from '../../../../../s3d2/scripts/templates/spriteIcon';
+import get from 'lodash/get';
 
 function $goToFlat(i18n, flat, floorList = []) {
   const $floorList = floorList
@@ -25,12 +27,41 @@ function $goToFlat(i18n, flat, floorList = []) {
   `
       : '';
 
+  const top = flat.customProperties?.find(el => get(el, 'value.crm_properties_id', false) == 55);
+  const right = flat.customProperties?.find(el => get(el, 'value.crm_properties_id', false) == 54);
+  const bottom = flat.customProperties?.find(el => get(el, 'value.crm_properties_id', false) == 56);
+  const left = flat.customProperties?.find(el => get(el, 'value.crm_properties_id', false) == 53);
+
+  const translateInfrastructure = value => {
+    if (!value) return '';
+    return i18n.t(`Floor.infrastructure.${value}`, { default: value });
+  };
+
   return `
     <div class="s3d-flat__floor">
       <div class="s3d-flat__floor-wrapper">
         <div class="s3d-flat__floor-info-wrapper">
-          <div class="s3d-flat__floor-info">
+
+          <div class="s3d2-floor-page__info-labels">
+            <div class="s3d2-floor-page__info-label top">
+              <p>${translateInfrastructure(get(top, 'value.value', ''))}</p>
+              ${s3d2spriteIcon('Arrow up')}
+            </div>
+            <div class="s3d2-floor-page__info-label right">
+              <p>${translateInfrastructure(get(right, 'value.value', ''))}</p>
+              ${s3d2spriteIcon('Arrow up')}
+            </div>
+            <div class="s3d2-floor-page__info-label bottom">
+              <p>${translateInfrastructure(get(bottom, 'value.value', ''))}</p>
+              ${s3d2spriteIcon('Arrow up')}
+            </div>
+            <div class="s3d2-floor-page__info-label left">
+              <p>${translateInfrastructure(get(left, 'value.value', ''))}</p>
+              ${s3d2spriteIcon('Arrow up')}
+            </div>
           </div>
+
+          <div class="s3d-flat__floor-info"></div>
         </div>
         <div class="s3d-flat__floor-clue">${i18n.t('Flat.change_floor')}</div>
         <article class="s3d-floor__nav">

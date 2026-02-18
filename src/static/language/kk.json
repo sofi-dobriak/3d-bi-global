@@ -396,9 +396,13 @@
     "number_rooms": "Жатын бөлмелер саны",
     "apps_from": "Тұрғын үйлер бастап",
     "infrastructure": {
-      "expo_center": "Nexpo Expocentre",
-      "yard": "Aула",
-      "central_mosque": "Орталық мешіт"
+      "View of the Expo": "Экспоға көрініс",
+      "Courtyard view": "Аулаға көрініс",
+      "View of the central Mosque": "Орталық мешітке көрініс",
+      "View of the Mosque": "Мешітке көрініс",
+      "View of Mega Silkway": "Мега Силк Вейге көрініс",
+      "View of the alley": "Аллеяға көрініс",
+      "View of the courtyard and Expo": "Аулаға және Экспоға көрініс"
     },
     "information": {
       "title": "Ақпарат",

@@ -177,11 +177,12 @@
         @include fonts.text-style-3-d-fonts-1920-body-regular();
         color: var(--color-surface-gray-700);
         text-align: center;
+        margin-top: 40px;
       }
 
       &-wrapper {
         width: 50%;
-        overflow: hidden;
+        // overflow: hidden;
 
         @media screen and (max-width: 768px) {
           width: 100%;
@@ -190,15 +191,7 @@
 
       &-info-wrapper {
         padding-bottom: 24px;
-        overflow: hidden;
-
-        .s3d2-floor-page__info-label {
-          @media screen and (max-width: 1024px) {
-            bottom: auto;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
+        position: relative;
 
         @media screen and (max-width: 768px) {
           padding-bottom: 16px;

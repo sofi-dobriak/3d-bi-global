@@ -395,11 +395,13 @@
     "number_rooms": "Number of Bedrooms",
     "apps_from": "Residences from",
     "infrastructure": {
-      "top": "View of the expo",
-      "right": "View in the yard",
-      "bottom": "View of the mosque",
-      "left": "View of the mega silk way",
-      "alley": "View of the alley"
+      "View of the Expo": "View of the Expo",
+      "Courtyard view": "Courtyard view",
+      "View of the central Mosque": "View of the central Mosque",
+      "View of Mega Silkway": "View of Mega Silkway",
+      "View of the alley": "View of the alley",
+      "View of the Mosque": "View of the Mosque",
+      "View of the courtyard and Expo": "View of the courtyard and Expo"
     },
     "information": {
       "title": "Information",

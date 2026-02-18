@@ -396,9 +396,13 @@
     "number_rooms": "Количество спален",
     "apps_from": "Резиденции от",
     "infrastructure": {
-      "expo_center": "Експоцентр Nexpo",
-      "yard": "Двор",
-      "central_mosque": "Центральная Мечеть"
+      "View of the Expo": "Вид на Экспо",
+      "Courtyard view": "Вид во двор",
+      "View of the central Mosque": "Вид на центральную мечеть",
+      "View of the Mosque": "Вид на мечеть",
+      "View of Mega Silkway": "Вид на Мега Силк Вей",
+      "View of the alley": "Вид на аллею",
+      "View of the courtyard and Expo": "Вид на двор и Экспо"
     },
     "information": {
       "title": "Информация",
