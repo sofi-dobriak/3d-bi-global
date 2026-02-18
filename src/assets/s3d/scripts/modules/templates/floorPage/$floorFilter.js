@@ -60,6 +60,15 @@ export default function $floorFilter(i18n, roomsCountList = new Set()) {
             })
           : ''
       }
+      ${
+        roomsCountList.has(6) || roomsCountList.size == 0
+          ? CheckboxWithLabel({
+              name: 'rooms-6',
+              value: 6,
+              title: i18n.t('Floor.filter.6'),
+            })
+          : ''
+      }
 
     </div>
   `;
