@@ -81,7 +81,7 @@ export default function FlybyController(i18n) {
       <div class="FlybyController">
         <div class="FlybyController__row">
           <!--${$dayNightSwitcher(i18n)}-->
-          ${IconButton('js-ctr-btn js-s3d-ctr__helper', '', 'Tutorial')}
+          ${IconButton('IconButton--dark js-ctr-btn js-s3d-ctr__helper', '', 'Tutorial')}
         </div>
         ${ButtonWithoutIcon(
           'js-s3d-nav__btn',
@@ -106,6 +106,7 @@ export default function FlybyController(i18n) {
       )} -->
       </div>
       ${SpinNav(i18n)}
+      <p class="info-text">${i18n.t('ctr.nav.info_text')}</p>
     </div>
   `;
 }

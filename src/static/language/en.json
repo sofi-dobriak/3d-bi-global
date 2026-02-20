@@ -2,6 +2,7 @@
   "currency_label": "$",
   "currency_label_m2": "$t(currency_label) per $t(area_unit)",
   "area_unit": "m²",
+
   "unit_statuses": {
     "0": "Sold",
     "1": "Available",
@@ -122,7 +123,8 @@
       "intro": "Intro",
       "plannings_availability": "Residence layouts",
       "home": "Home",
-      "masterplan": "Building Overview"
+      "masterplan": "Building Overview",
+      "info_text": "The image is for illustrative purposes only. The developer reserves the right to make changes to architectural and planning solutions, materials, and landscaping elements."
     },
     "share": {
       "link-copied": "Link copied"
